@@ -72,3 +72,5 @@ This Application was Made with the contributions of:
 https://github.com/NicoleT27/Playful-Pixels-
 
 ## Deployed-application-link
+
+https://playful-pixels-237d97cb1333.herokuapp.com/
