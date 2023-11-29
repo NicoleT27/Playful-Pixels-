@@ -33,9 +33,12 @@ This application is an online gameroom with multiple games to choose from.
 ![npm](https://img.shields.io/badge/npm-6.14.4-blue.svg)
 ![node.js](https://img.shields.io/badge/node.js-12.0-green.svg)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![github](https://img.shields.io/badge/github-Profile-lightgrey.svg)
 ![Heroku](https://img.shields.io/badge/Heroku-App-blueviolet?logo=heroku)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 
 ## Install
