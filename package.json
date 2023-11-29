@@ -1,0 +1,19 @@
+{
+  "name": "playful-pixels-",
+  "version": "1.0.0",
+  "description": "A game lobby hosting multiple games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleT27/Playful-Pixels-.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NicoleT27/Playful-Pixels-/issues"
+  },
+  "homepage": "https://github.com/NicoleT27/Playful-Pixels-#readme"
+}
