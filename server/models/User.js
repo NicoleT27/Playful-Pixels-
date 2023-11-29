@@ -26,7 +26,7 @@ const userSchema = new Schema (
     }
 );
 
-//hashes password beofre saving it
+//hashes password before saving it
 userSchema.pre('save', (next) => {
     this.password = bcrypt.hashSync(this.password, SALT_WORK_FACTOR);
 
