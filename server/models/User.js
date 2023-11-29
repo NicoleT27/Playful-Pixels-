@@ -1,4 +1,6 @@
 const { Schema, model} = require ('mongoose');
+const bcrypt = require('bcrypt');
+const SALT_WORK_FACTOR = 10;
 
 const userSchema = new Schema (
     {
@@ -24,6 +26,12 @@ const userSchema = new Schema (
     }
 );
 
+//hashes password beofre saving it
+userSchema.pre('save', (next) => {
+    this.password = bcrypt.hashSync(this.password, SALT_WORK_FACTOR);
+
+    next();
+})
 
 
 const User = model ('user', userSchema);
