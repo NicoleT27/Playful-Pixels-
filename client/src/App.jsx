@@ -1,14 +1,21 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { useState } from 'react'
+//Is this being used for anything? Alejandra Commented it out to check on other functionality
+  //Feel free to put it back
+// import { useState } from 'react'
+
 import './App.css'
 
 import Home from './pages/home';
 import Login from './pages/loginPage';
 import Signup from './pages/signup';
+import Navbar from './components/Navigation/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  //Is this being used for anything? Alejandra Commented it out to check on other functionality
+  //Feel free to put it back
+
+  // const [count, setCount] = useState(0)
 
   return (
     <div>

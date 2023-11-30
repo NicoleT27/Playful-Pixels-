@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import './Navbar.css'
 
 import { Link } from 'react-router-dom';
@@ -9,8 +9,10 @@ import { Link } from 'react-router-dom';
 //   )
 // }
 
+// Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
 const Navbar = () => {
-  <header>
+  return (
+    <header className='navBar'>
       <div className="container">
         <Link to="/">
           <h1>Playful Pixels</h1>
@@ -23,6 +25,7 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
+  )
 }
 
 
