@@ -14,11 +14,8 @@ const fakeData={
   name:"playful-Pixels"
 }
 
+app.use(express.static("client"))
 
-app.get("/api/welcome", (req,res) => {
-  res.json(fakeData)
-})
-app.get("/",(req, res) => res.send("html under construction.."))
 // const sess = {
 //   secret: process.env.SESSIONSECRET,
 //   cookie: {
