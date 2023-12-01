@@ -10,7 +10,15 @@ const MongoStore = require('connect-mongo');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+const fakeData={
+  name:"playful-Pixels"
+}
 
+
+app.get("/api/welcome", (req,res) => {
+  res.json(fakeData)
+})
+app.get("/",(req, res) => res.send("html under construction.."))
 // const sess = {
 //   secret: process.env.SESSIONSECRET,
 //   cookie: {
