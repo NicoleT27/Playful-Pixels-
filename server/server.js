@@ -12,8 +12,6 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 
-// app.use(express.static("client"))
-
 const sess = {
   secret: process.env.SESSIONSECRET,
   cookie: {

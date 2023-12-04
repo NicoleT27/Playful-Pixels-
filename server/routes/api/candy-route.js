@@ -1,10 +1,14 @@
 const express = require("express");
-const Candy = require("../../models/candy");
-
 const router = express.Router();
+const Candy = require("../../models/Candy");
 
-router.get("/candy", async (req, res) => {
-   res.send("hello this is the candy crush game")
+const mockInfo = {
+   name:"Candy crush"
+}
+
+router.get("/candy",(req, res) => {
+   // res.send("hello this is the candy crush game")
+   res.json(mockInfo);
 });
 
 
