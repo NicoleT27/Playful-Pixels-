@@ -7,7 +7,7 @@
     "install": "cd server && npm install && cd ../client && npm install ",
     "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
+    "start": "nodemon node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\""
   },
   "repository": {
@@ -28,6 +28,7 @@
     "bootstrap": "^5.3.2",
     "concurrently": "^8.2.0",
     "connect-mongo": "^5.1.0",
+    "nodemon": "^3.0.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "vite": "^5.0.4"

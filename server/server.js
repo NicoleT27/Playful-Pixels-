@@ -11,9 +11,6 @@ const mongoose = require ('mongoose');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// const fakeData={
-//   name:"playful-Pixels"
-// }
 
 // app.use(express.static("client"))
 
@@ -40,7 +37,7 @@ app.use (session(sess));
 
 
 app.use (express.urlencoded({ extended: true }));
-app.use(express.json());th
+app.use(express.json());
 app.use(routes);
 
 db.once('open', () => {
