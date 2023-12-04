@@ -4,7 +4,7 @@ const userRoutes = require('./user-routes');
 const candyRoutes = require('./candy-route');
 
 router.use('/users', userRoutes);
-router.use("/api/candy", candyRoutes);
+router.use("/candy", candyRoutes);
 
 
 module.exports = router;
