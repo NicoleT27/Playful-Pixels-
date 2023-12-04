@@ -10,4 +10,8 @@ router.post("/candy", async (req, res) => {
   res.send("hello this is the candy crush game");
 });
 
+router.post ("/score", async (req, res) => {
+   res.send ("the high score has been saved");
+})
+
 module.exports = router;

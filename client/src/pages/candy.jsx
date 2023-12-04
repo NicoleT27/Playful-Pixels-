@@ -20,7 +20,7 @@ const App = () => {
     createBoard()
     return(
         <div>
-
+            <p>This is my temporary candy page.</p>
         </div>
     )
 }
