@@ -10,7 +10,7 @@ import Home from './pages/home';
 import Login from './pages/loginPage';
 import Signup from './pages/signup';
 import Navbar from './components/Navigation/Navbar';
-import candyCrush from './pages/candy';
+import CandyCrush from './pages/candy';
 
 function App() {
   //Is this being used for anything? Alejandra Commented it out to check on other functionality
@@ -27,7 +27,7 @@ function App() {
             <Route path = "/" element = {<Home/>} />
             <Route path = "/login" element = {<Login/>} />
             <Route path = "/signup" element = {<Signup/>} />
-            <Route path="/candy" element = {<candyCrush/>}/>
+            <Route path="/candy" element = {<CandyCrush/>}/>
           </Routes>
         </div>
       </BrowserRouter>
