@@ -10,11 +10,11 @@ const MongoStore = require('connect-mongo');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const fakeData={
-  name:"playful-Pixels"
-}
+// const fakeData={
+//   name:"playful-Pixels"
+// }
 
-app.use(express.static("client"))
+// app.use(express.static("client"))
 
 // const sess = {
 //   secret: process.env.SESSIONSECRET,
