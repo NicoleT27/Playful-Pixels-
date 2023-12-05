@@ -27,7 +27,7 @@ const userSchema = new Schema (
 );
 
 //hashes password before saving it
-userSchema.pre('save', async (next) => {
+userSchema.pre('save', async function (next) {
     const salt = await bcrypt.genSalt(SALT_WORK_FACTOR);
     const hash = await bcrypt.hash(this.password, salt);
     this.password = hash;

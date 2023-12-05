@@ -34,8 +34,12 @@ for (let i =0; i < 47; i++) {
   }, []);
 
 useEffect(() => {
+    setInterval(() => {
 checkForColumnOfThree()
-}, [checkForColumnOfThree]);
+    }, 100)
+    return () => clearInterval(timer)
+
+}, [checkForColumnOfThree])
 
   console.log(currentColorArrangement);
 
