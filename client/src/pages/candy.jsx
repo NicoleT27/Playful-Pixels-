@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 const width = 8
 const candyColors=[
     'blue',
@@ -10,20 +10,28 @@ const candyColors=[
 ]
 
 
-
 const candyCrush = () => {
  const [currentColorArrangement, setCurrentColorArrangement] = useState([])
     
-    const createBoard = () => {
+    function createBoard() {
         const randomColorArrangement = []
         for (let i = 0; i < width * width; i++) {
         const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)]
         randomColorArrangement.push(randomColor)  
         }
-        // console.log(randomColorArrangement);
+       setCurrentColorArrangement(randomColorArrangement)
     }
-    createBoard()
+    useEffect(() => {
+      createBoard()
+    }, [])
+    
+    console.log(currentColorArrangement);
     return <div>Welcome to Candy Crush</div>;
+    <div className='app'>
+        <div className='game'>
+
+        </div>
+    </div>
 }
 
 
