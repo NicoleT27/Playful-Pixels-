@@ -1,0 +1,14 @@
+h3  {
+    font-family: 'Nippo', sans-serif;
+    color: #BB68C9;
+}
+#result {
+    font-family: 'Nippo', sans-serif;
+    color: #BB68C9;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 600px;
+  }
