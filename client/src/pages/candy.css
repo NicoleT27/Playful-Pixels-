@@ -2,6 +2,7 @@
 .app{
     display: flex;
     padding: 30px;
+    justify-content: center;
    
 }
 .game{
