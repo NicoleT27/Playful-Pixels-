@@ -28,10 +28,23 @@ const userSchema = new Schema (
 
 //hashes password before saving it
 userSchema.pre('save', (next) => {
-    this.password = bcrypt.hashSync(this.password, SALT_WORK_FACTOR);
+    bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {
+        if (err) {
+          return next(err);
+        }
 
-    next();
-})
+        bcrypt.hash(this.password, salt, (err, hash) => {
+          if (err) {
+            return next(err);
+          }
+    
+          // Update the password with the hashed value
+          this.password = hash;
+    
+          next();
+        });
+    });
+});
 
 
 const User = model ('user', userSchema);

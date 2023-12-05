@@ -1,8 +1,8 @@
 
-function welcome() {
-    return <div>Welcome to Candy Crush</div>;
-}
-welcome()
+// function welcome() {
+//     return <div>Welcome to Candy Crush</div>;
+// }
+// welcome()
 
 import {useEffect, useState} from 'react'
 const width = 8
