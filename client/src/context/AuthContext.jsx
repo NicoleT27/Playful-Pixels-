@@ -20,13 +20,14 @@ export const AuthContextProvider = ({ children }) => {
         user: null
     });
 
-    useEffect(() => {
-        const user = JSON.parse(localStorage.getItem('user'));
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
 
-        id (user) ;{
-            dispatch({type: 'LOGIN', payload: user});
-        }
-    }, []);
+    if (user) {
+      dispatch({ type: "LOGIN", payload: user });
+    }
+  }, []);
+
 
     //this will help us keep track of whether we are logged in or logged out
     console.log('AuthContext state: ', state);
