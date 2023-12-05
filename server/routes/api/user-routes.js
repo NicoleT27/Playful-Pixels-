@@ -16,13 +16,44 @@ const router = express.Router();
 //login route
 // /api/users/login
 router.post('/login', async (req, res) => {
-    res.send("login route accessed");
+    try {
+        if (req.body.password || req.body.email) {
+            throw Error('All fields must be entered');
+        }
+
+        const email = req.body.email;
+
+        const userData = await User.findOne ({email});
+
+        if (!userData) {
+            throw Error ('Email cannot be found in database');
+        }
+
+        const validPassword = await userData.checkPassword(req.body.password);
+        
+        if (!validPassword) {
+            throw Error ('Password does not match email');
+        } 
+
+        //if no errors are caught, we create a token
+        const token = createToken(userData._id);
+
+        res.status(200).json({token});
+    
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 //signup route
 // /api/users/signup
 router.post('/signup', async (req, res) => {
     try {
+
+        if (!req.body.username || req.body.password || req.body.email) {
+            throw Error('All fields must be entered');
+        }
+
         const userData = await User.create(req.body);
 
         const token = createToken(userData._id);
@@ -32,8 +63,10 @@ router.post('/signup', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
     }
-})
+});
 
+
+// function to get all registered users
 // /api/users
 router.get('/', async (req, res) => {
     try {
@@ -43,6 +76,6 @@ router.get('/', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
     }
-})
+});
 
 module.exports = router;
