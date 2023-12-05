@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* if user is logged out... */}
           {!user && (
-            <div className="container">
+            <div className="links">
             <Link to="/login">Login</Link>
             <Link to="/signup">Signup</Link>
             {/* for now, regardless of whether the user is logged in or out, the nav bar will display all games... this is while we are in the development stage. */}
