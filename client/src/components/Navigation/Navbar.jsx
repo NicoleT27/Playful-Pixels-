@@ -29,6 +29,7 @@ const Navbar = () => {
           <h1 className="title">Playful Pixels</h1>
         </Link>
         <nav>
+          {/* if user is logged in... */}
           {user && (
           <div>
             <div>{user.email}</div>
@@ -40,6 +41,7 @@ const Navbar = () => {
           </div>
           )}
 
+          {/* if user is logged out... */}
           {!user && (
             <div className="container">
             <Link to="/login">Login</Link>
