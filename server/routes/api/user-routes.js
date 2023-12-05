@@ -1,4 +1,4 @@
-const require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const User = require ('../../models/User');
 const jwt = require('jsonwebtoken');
@@ -25,9 +25,9 @@ router.post('/signup', async (req, res) => {
     try {
         const userData = await User.create(req.body);
 
- crear        const token 
+        const token = createToken(userData._id);
 
-        res.json(userData);
+        res.status(200).json({token});
     } catch (err) {
         res.status(500).json(err);
     }
