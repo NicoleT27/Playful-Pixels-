@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
         //if no errors are caught, we create a token
         const token = createToken(userData._id);
 
-        res.status(200).json({token});
+        res.status(200).json({email, token});
     
     } catch (err) {
         console.log(err);
@@ -59,7 +59,9 @@ router.post('/signup', async (req, res) => {
 
         const token = createToken(userData._id);
 
-        res.status(200).json({token});
+        const email = req.body.email;
+
+        res.status(200).json({email, token});
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
