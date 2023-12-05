@@ -27,7 +27,7 @@ export const useLogin = () => {
             setError(json.error);
         } else {
             //save json webtoken to local storage in case user closes page and reopens before session expires
-            localStorage.setItem('user', json.stringify(json));
+            localStorage.setItem('user', JSON.stringify(json));
 
             //update authcontext
             dispatch({type: 'LOGIN', payload: json});

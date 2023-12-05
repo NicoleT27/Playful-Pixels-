@@ -1,3 +1,4 @@
+const width = 8
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const candyColors = ["blue", "green", "orange", "purple", "red", "yellow"];
@@ -22,7 +23,7 @@ const candyCrush = () => {
   };
 
    const checkForRowOfFour = () => {
-     for (let i = 0; i < 39; i++) {
+     for (let i = 0; i < 64; i++) {
        const rowOfFour = [i,i + 1,  i + 2, i + 3];
        const decidedColor = currentColorArrangement[i];
         const notValid = [5,6,7,13,14,15,21,22,23,29,30,31,37,38,39,45,46,47,53,54,55,62,63,64]
