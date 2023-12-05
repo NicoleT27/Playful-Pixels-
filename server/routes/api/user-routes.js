@@ -17,7 +17,7 @@ const router = express.Router();
 // /api/users/login
 router.post('/login', async (req, res) => {
     try {
-        if (req.body.password || req.body.email) {
+        if (!req.body.password || !req.body.email) {
             throw Error('All fields must be entered');
         }
 
@@ -41,6 +41,7 @@ router.post('/login', async (req, res) => {
         res.status(200).json({token});
     
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
@@ -50,7 +51,7 @@ router.post('/login', async (req, res) => {
 router.post('/signup', async (req, res) => {
     try {
 
-        if (!req.body.username || req.body.password || req.body.email) {
+        if (!req.body.username || !req.body.password || !req.body.email) {
             throw Error('All fields must be entered');
         }
 
