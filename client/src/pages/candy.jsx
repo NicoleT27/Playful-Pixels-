@@ -1,3 +1,9 @@
+
+function welcome() {
+    return <div>Welcome to Candy Crush</div>;
+}
+welcome()
+
 import {useEffect, useState} from 'react'
 const width = 8
 const candyColors=[
@@ -26,12 +32,18 @@ const candyCrush = () => {
     }, [])
     
     console.log(currentColorArrangement);
-    return <div>Welcome to Candy Crush</div>;
-    <div className='app'>
-        <div className='game'>
-
-        </div>
-    </div>
+    
+ return (
+    <div>Welcome to Candy Crush</div>,
+   <div className="app">
+     <div className="game">
+       {currentColorArrangement.map((candyColor, index) => (
+         <img key={index} style={{backgroundColor:candyColor}}
+         />
+       ))}
+     </div>
+   </div>
+ );
 }
 
 

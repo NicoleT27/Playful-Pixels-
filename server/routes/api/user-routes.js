@@ -1,5 +1,13 @@
+const require('dotenv').config();
 const express = require('express');
 const User = require ('../../models/User');
+const jwt = require('jsonwebtoken');
+
+// const require('dotenv').config();
+
+const createToken = (userId) => {
+    jwt.sign({_id: userId}, process.env.SESSIONSECRET, { expiresIn: 5})
+}
 
 const router = express.Router();
 
@@ -14,7 +22,15 @@ router.post('/login', async (req, res) => {
 //signup route
 // /api/users/signup
 router.post('/signup', async (req, res) => {
-    res.send("signup route accessed");
+    try {
+        const userData = await User.create(req.body);
+
+ crear        const token 
+
+        res.json(userData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 module.exports = router;
