@@ -1,7 +1,24 @@
 const width = 8
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const candyColors = ["blue", "green", "orange", "purple", "red", "yellow"];
+import { faCandyCane } from "@fortawesome/free-solid-svg-icons";
+import redCandy from '../assets/images/red-candy.png'
+import pinkCandy from "../assets/images/pink-candy.png"
+import orangeCandy from "../assets/images/orange-candy.png"
+import yellowCandy from "../assets/images/yellow-candy.png"
+import greenCandy from "../assets/images/green-candy.png"
+import rainbowCandy from "../assets/images/rainbow-candy.png"
+import blank from '../assets/images/blank.png'
+
+
+const candyColors = [
+  rainbowCandy,
+  greenCandy,
+  orangeCandy,
+  pinkCandy,
+  redCandy,
+  yellowCandy,
+];
 
 const candyCrush = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
@@ -17,8 +34,9 @@ const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
         )
       ) {
         columnOfFour.forEach(
-          (square) => (currentColorArrangement[square] = "")
+          (square) => (currentColorArrangement[square] = blank)
         );
+        return true;
       }
     }
   };
@@ -35,8 +53,9 @@ const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
          )
        ) {
          rowOfFour.forEach(
-           (square) => (currentColorArrangement[square] = "")
+           (square) => (currentColorArrangement[square] = blank)
          );
+         return true;
        }
      }
    };
@@ -46,8 +65,9 @@ for (let i =0; i <= 47; i++) {
     const columnOfThree = [i, i + width, i + width * 2]
     const decidedColor = currentColorArrangement[i]
     if (columnOfThree.every(square => currentColorArrangement[square] === decidedColor)) {
-        columnOfThree.forEach(square => currentColorArrangement[square] = "")
-    }
+        columnOfThree.forEach(square => currentColorArrangement[square] = blank)
+   return true
+      }
 }
 }
 
@@ -60,10 +80,9 @@ const checkForRowOfThree = () => {
     if (notValid.includes(i)) continue
     if (
       rowOfThree.every(
-        (square) => currentColorArrangement[square] === decidedColor
-      )
-    ) {
-      rowOfThree.forEach((square) => (currentColorArrangement[square] = ""));
+        (square) => currentColorArrangement[square] === decidedColor)) {
+      rowOfThree.forEach((square) => (currentColorArrangement[square] = blank));
+    return true;
     }
   }
 };
@@ -73,11 +92,11 @@ const moveIntoSquareBelow = () => {
   for (let i = 0; i <= 55; i++) {
     const firstRow = [0,1,2,3,4,5,6,7]
     const isFirstRow = firstRow.includes(i)
-    if(isFirstRow && currentColorArrangement[i] === "") {
+    if(isFirstRow && currentColorArrangement[i] === blank) {
       let randomNumber = Math.floor(Math.random() * candyColors.length)
     currentColorArrangement[i]=candyColors[randomNumber]
     }
-   if ((currentColorArrangement[i + width]) === "") {
+   if ((currentColorArrangement[i + width]) === blank) {
     currentColorArrangement[i+ width] = currentColorArrangement[i]
     currentColorArrangement[i] = ''
    }
@@ -98,8 +117,8 @@ const dragEnd = (e) => {
   const squareBeingDraggedId = parseInt(squareBeingDragged.getAttribute("data-id"))
   const squareBeingReplacedId = parseInt(squareBeingReplaced.getAttribute("data-id"))
 
-currentColorArrangement[squareBeingReplacedId]= squareBeingReplaced.style.backgroundColor
-currentColorArrangement[squareBeingDraggedId] =squareBeingDragged.style.backgroundColor
+currentColorArrangement[squareBeingReplacedId]= squareBeingReplaced.getAttribute("src")
+currentColorArrangement[squareBeingDraggedId] =squareBeingDragged.getAttribute("src")
 
 const validMoves = [
   squareBeingDragged -1,
@@ -108,6 +127,22 @@ const validMoves = [
   squareBeingDragged + width
 ]
 const validMove = validMoves.includes(squareBeingReplacedId)
+
+const isAColumnOfFour = checkForColumnOfFour()
+const isARowOfFour = checkForRowOfFour()
+const isAColumnOfThree = checkForColumnOfThree()
+const isARowOfThree = checkForRowOfThree();
+
+if(squareBeingReplacedId && validMove && isARowOfThree || isAColumnOfFour || isARowOfFour || isAColumnOfThree) {
+  setSquareBeingDragged(null)
+  setSquareBeingReplaced(null)
+} else{
+  currentColorArrangement[squareBeingReplacedId]=squareBeingReplaced.getAttribute("src")
+  currentColorArrangement[squareBeingDraggedId] =
+    squareBeingDragged.getAttribute("src");
+setCurrentColorArrangement([...currentColorArrangement])
+}
+}
 }
 
 
@@ -119,59 +154,58 @@ const validMove = validMoves.includes(squareBeingReplacedId)
       randomColorArrangement.push(randomColor);
     }
     setCurrentColorArrangement(randomColorArrangement);
-  }
-  useEffect(() => {
-    createBoard();
-  }, []);
 
-useEffect(() => {
-  const timer = setInterval(() => {
-    checkForColumnOfFour();
-    checkForRowOfFour();
-    checkForColumnOfThree();
-    checkForRowOfThree();
-    moveIntoSquareBelow();
-    setCurrentColorArrangement([...currentColorArrangement]);
-  }, 100);
-  return () => clearInterval(timer);
-}, [
-  checkForColumnOfFour,
-  checkForRowOfFour,
-  checkForColumnOfThree,
-  checkForRowOfThree,
-  moveIntoSquareBelow,  currentColorArrangement,
-]);
+    useEffect(() => {
+      createBoard();
+    }, []);
 
-  console.log(currentColorArrangement);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        checkForColumnOfFour();
+        checkForRowOfFour();
+        checkForColumnOfThree();
+        checkForRowOfThree();
+        moveIntoSquareBelow();
+        setCurrentColorArrangement([...currentColorArrangement]);
+      }, 100);
+      return () => clearInterval(timer);
+    }, [
+      checkForColumnOfFour,
+      checkForRowOfFour,
+      checkForColumnOfThree,
+      checkForRowOfThree,
+      moveIntoSquareBelow,
+      currentColorArrangement,
+    ]);
 
-  return (
-    <div>
-      <div className="welcome">Welcome to Candy Crush</div>
-      <FontAwesomeIcon icon="fa-solid fa-candy-cane" />
-      <div className="app">
-        <div className="game">
-          {currentColorArrangement.map((candyColor, index) => (
-            <img
-              key={index}
-              style={{ backgroundColor: candyColor }}
-              src=""
-              alt={candyColor}
-              data-id={index}
-              draggable={true}
-              onDragStart={dragStart}
-              onDragOver={(e) => e.preventDefault()}
-              onDragEnter={(e) => e.preventDefault()}
-              onDragLeave={(e) => e.preventDefault()}
-              onDrop={{dragDrop}}
-              onDragEnd={dragEnd}
+    return (
+      <div>
+        <div className="welcome">
+          Welcome to Candy Crush
+          <FontAwesomeIcon icon={faCandyCane} />
+        </div>
 
-              
-            />
-          ))}
+        <div className="app">
+          <div className="game">
+            {currentColorArrangement.map((candyColor, index) => (
+              <img
+                key={index}
+                src={candyColor}
+                alt={candyColor}
+                data-id={index}
+                draggable={true}
+                onDragStart={dragStart}
+                onDragOver={(e) => e.preventDefault()}
+                onDragEnter={(e) => e.preventDefault()}
+                onDragLeave={(e) => e.preventDefault()}
+                onDrop={{ dragDrop }}
+                onDragEnd={dragEnd}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
 
 export default candyCrush;
