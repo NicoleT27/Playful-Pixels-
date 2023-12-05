@@ -7,7 +7,7 @@ import pinkCandy from "../assets/images/pink-candy.png"
 import orangeCandy from "../assets/images/orange-candy.png"
 import yellowCandy from "../assets/images/yellow-candy.png"
 import greenCandy from "../assets/images/green-candy.png"
-import rainbowCandy from "../assets/images/rainbow-candy.png"
+import rainbowCandy from "../assets/images/rainbow-candy.png";
 import blank from '../assets/images/blank.png'
 
 
@@ -20,7 +20,7 @@ const candyColors = [
   yellowCandy,
 ];
 
-const candyCrush = () => {
+const CandyCrush = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
 const [squareBeingDragged,setSquareBeingDragged] = useState(null)
 const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
@@ -198,7 +198,7 @@ setCurrentColorArrangement([...currentColorArrangement])
                 onDragOver={(e) => e.preventDefault()}
                 onDragEnter={(e) => e.preventDefault()}
                 onDragLeave={(e) => e.preventDefault()}
-                onDrop={{ dragDrop }}
+                onDrop={dragDrop}
                 onDragEnd={dragEnd}
               />
             ))}
@@ -208,4 +208,5 @@ setCurrentColorArrangement([...currentColorArrangement])
     );
   }
 
-export default candyCrush;
+export default CandyCrush;
+

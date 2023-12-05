@@ -12,6 +12,7 @@ import Signup from './pages/signup';
 import Navbar from './components/Navigation/Navbar';
 import CandyCrush from './pages/candy';
 
+
 function App() {
   //Is this being used for anything? Alejandra Commented it out to check on other functionality
   //Feel free to put it back
