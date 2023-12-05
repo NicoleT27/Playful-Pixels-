@@ -1,6 +1,8 @@
+
 .app{
     display: flex;
     padding: 30px;
+   
 }
 .game{
     width: 560px;
@@ -12,4 +14,10 @@
 .game img {
     width: 70px;
     height:70px;
+}
+
+.welcome {
+    font-size: 30px;
+    text-align: center
+    ;
 }

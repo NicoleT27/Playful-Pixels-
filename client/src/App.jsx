@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import { useState } from 'react'
 
 import './App.css'
-
+import './pages/candy.css'
 import Home from './pages/home';
 import Login from './pages/loginPage';
 import Signup from './pages/signup';
