@@ -34,12 +34,13 @@ for (let i =0; i < 47; i++) {
   }, []);
 
 useEffect(() => {
-    setInterval(() => {
+   const timer = setInterval(() => {
 checkForColumnOfThree()
+setCurrentColorArrangement([...currentColorArrangement])
     }, 100)
     return () => clearInterval(timer)
 
-}, [checkForColumnOfThree])
+}, [checkForColumnOfThree, currentColorArrangement])
 
   console.log(currentColorArrangement);
 
