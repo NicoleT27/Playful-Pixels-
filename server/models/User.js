@@ -27,23 +27,12 @@ const userSchema = new Schema (
 );
 
 //hashes password before saving it
-userSchema.pre('save', (next) => {
-    bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {
-        if (err) {
-          return next(err);
-        }
-
-        bcrypt.hash(this.password, salt, (err, hash) => {
-          if (err) {
-            return next(err);
-          }
+userSchema.pre('save', async (next) => {
+    const salt = await bcrypt.genSalt(SALT_WORK_FACTOR);
+    const hash = await bcrypt.hash(this.password, salt);
+    this.password = hash;
     
-          // Update the password with the hashed value
-          this.password = hash;
-    
-          next();
-        });
-    });
+    next();
 });
 
 
