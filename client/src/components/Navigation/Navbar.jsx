@@ -27,7 +27,7 @@ const Navbar = () => {
     <header className="navBar">
       <div className="container">
         <Link to="/">
-          <h1 className="title">Playful Pixels</h1>
+          <h1 className="title">Playful Pixels </h1>
         </Link>
         <nav>
           {/* if user is logged in... */}

@@ -14,13 +14,13 @@ export default defineConfig({
       usePolling: true,
     },
     open: true,
-    proxy: {
-      "/graphql": {
-        target: "http://localhost:3001",
-        secure: false,
-        changeOrigin: true,
-      },
-    },
+    // proxy: {
+    //   "/graphql": {
+    //     target: "http://localhost:3001",
+    //     secure: false,
+    //     changeOrigin: true,
+    //   },
+    // },
   },
 });
 
