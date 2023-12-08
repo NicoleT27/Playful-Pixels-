@@ -11,6 +11,7 @@ import Login from './pages/loginPage';
 import Signup from './pages/signup';
 import Navbar from './components/Navigation/Navbar';
 import CandyCrush from './pages/candy';
+import MemoryGame from './pages/memory';
 
 
 function App() {
