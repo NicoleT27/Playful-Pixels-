@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
-// const Navbar = () => {
-//   return (
-//     <div>Navbar</div>
-//   )
-// }
+
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
 const Navbar = () => {
