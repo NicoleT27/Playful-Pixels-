@@ -11,6 +11,7 @@ import Login from './pages/loginPage';
 import Signup from './pages/signup';
 import Navbar from './components/Navigation/Navbar';
 import CandyCrush from './pages/candy';
+import MemoryGame from './pages/memory';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path = "/login" element = {<Login/>} />
             <Route path = "/signup" element = {<Signup/>} />
             <Route path="/candy" element = {<CandyCrush/>}/>
+            <Route path="/memory" element = {<MemoryGame/>}/>
           </Routes>
         </div>
       </BrowserRouter>
