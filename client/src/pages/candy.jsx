@@ -1,7 +1,7 @@
 const width = 8
 import { useEffect, useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCandyCane } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCandyCane } from "@fortawesome/free-solid-svg-icons";
 import redCandy from '../assets/images/red-candy.png'
 import pinkCandy from "../assets/images/pink-candy.png"
 import orangeCandy from "../assets/images/orange-candy.png"
@@ -133,6 +133,7 @@ const isARowOfFour = checkForRowOfFour()
 const isAColumnOfThree = checkForColumnOfThree()
 const isARowOfThree = checkForRowOfThree();
 
+console.log("hello");
 if(squareBeingReplacedId && validMove && isARowOfThree || isAColumnOfFour || isARowOfFour || isAColumnOfThree) {
   setSquareBeingDragged(null)
   setSquareBeingReplaced(null)
@@ -140,73 +141,144 @@ if(squareBeingReplacedId && validMove && isARowOfThree || isAColumnOfFour || isA
   currentColorArrangement[squareBeingReplacedId]=squareBeingReplaced.getAttribute("src")
   currentColorArrangement[squareBeingDraggedId] =
     squareBeingDragged.getAttribute("src");
+    console.log(currentColorArrangement)
 setCurrentColorArrangement([...currentColorArrangement])
 }
 }
-}
+// function createBoard() {
+  // const randomColorArrangement = [];
+  // for (let i = 0; i < width * width; i++) {
+  //   const randomColor =
+  //     candyColors[Math.floor(Math.random() * candyColors.length)];
+  //   randomColorArrangement.push(randomColor); 
+  //   setCurrentColorArrangement(randomColorArrangement);
+  // }
+ 
 
-
-  function createBoard() {
+  useEffect(() => {
     const randomColorArrangement = [];
-    for (let i = 0; i < width * width; i++) {
-      const randomColor =
+     for (let i = 0; i < width * width; i++) {
+       const randomColor =
         candyColors[Math.floor(Math.random() * candyColors.length)];
-      randomColorArrangement.push(randomColor);
+       randomColorArrangement.push(randomColor);
+       setCurrentColorArrangement(randomColorArrangement);
     }
-    setCurrentColorArrangement(randomColorArrangement);
+    // createBoard();
+    // CandyCrush();
+  }, []);
 
-    useEffect(() => {
-      createBoard();
-    }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      checkForColumnOfFour();
+      checkForRowOfFour();
+      checkForColumnOfThree();
+      checkForRowOfThree();
+      moveIntoSquareBelow();
+      setCurrentColorArrangement([...currentColorArrangement]);
+    }, 100);
+    return () => clearInterval(timer);
+  }, [
+    checkForColumnOfFour,
+    checkForRowOfFour,
+    checkForColumnOfThree,
+    checkForRowOfThree,
+    moveIntoSquareBelow,
+    currentColorArrangement,
+  ]);
 
-    useEffect(() => {
-      const timer = setInterval(() => {
-        checkForColumnOfFour();
-        checkForRowOfFour();
-        checkForColumnOfThree();
-        checkForRowOfThree();
-        moveIntoSquareBelow();
-        setCurrentColorArrangement([...currentColorArrangement]);
-      }, 100);
-      return () => clearInterval(timer);
-    }, [
-      checkForColumnOfFour,
-      checkForRowOfFour,
-      checkForColumnOfThree,
-      checkForRowOfThree,
-      moveIntoSquareBelow,
-      currentColorArrangement,
-    ]);
+  return (
+    <div>
+      <div className="welcome">
+        Welcome to Candy Crush
+        <FontAwesomeIcon icon={faCandyCane} />
+      </div>
 
-    return (
-      <div>
-        <div className="welcome">
-          Welcome to Candy Crush
-          {/* <FontAwesomeIcon icon={faCandyCane} /> */}
-        </div>
-
-        <div className="app">
-          <div className="game">
-            {currentColorArrangement.map((candyColor, index) => (
-              <img
-                key={index}
-                src={candyColor}
-                alt={candyColor}
-                data-id={index}
-                draggable={true}
-                onDragStart={dragStart}
-                onDragOver={(e) => e.preventDefault()}
-                onDragEnter={(e) => e.preventDefault()}
-                onDragLeave={(e) => e.preventDefault()}
-                onDrop={dragDrop}
-                onDragEnd={dragEnd}
-              />
-            ))}
-          </div>
+      <div className="app">
+        <div className="game">
+          {currentColorArrangement.map((candyColor, index) => (
+            <img
+              key={index}
+              src={candyColor}
+              alt={candyColor}
+              data-id={index}
+              draggable={true}
+              onDragStart={dragStart}
+              onDragOver={(e) => e.preventDefault()}
+              onDragEnter={(e) => e.preventDefault()}
+              onDragLeave={(e) => e.preventDefault()}
+              onDrop={dragDrop}
+              onDragEnd={dragEnd}
+            />
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
+// }
+
+
+  // function createBoard() {
+  //   const randomColorArrangement = [];
+  //   for (let i = 0; i < width * width; i++) {
+  //     const randomColor =
+  //       candyColors[Math.floor(Math.random() * candyColors.length)];
+  //     randomColorArrangement.push(randomColor);
+  //   }
+  //   setCurrentColorArrangement(randomColorArrangement);
+
+  //   useEffect(() => {
+  //     createBoard();
+  //   }, []);
+
+  //   useEffect(() => {
+  //     const timer = setInterval(() => {
+  //       checkForColumnOfFour();
+  //       checkForRowOfFour();
+  //       checkForColumnOfThree();
+  //       checkForRowOfThree();
+  //       moveIntoSquareBelow();
+  //       setCurrentColorArrangement([...currentColorArrangement]);
+  //     }, 100);
+  //     return () => clearInterval(timer);
+  //   }, [
+  //     checkForColumnOfFour,
+  //     checkForRowOfFour,
+  //     checkForColumnOfThree,
+  //     checkForRowOfThree,
+  //     moveIntoSquareBelow,
+  //     currentColorArrangement,
+  //   ]);
+
+  //   return (
+  //     <div>
+  //       <div className="welcome">
+  //         Welcome to Candy Crush
+  //         {/* <FontAwesomeIcon icon={faCandyCane} /> */}
+  //       </div>
+
+  //       <div className="app">
+  //         <div className="game">
+  //           {currentColorArrangement.map((candyColor, index) => (
+  //             <img
+  //               key={index}
+  //               src={candyColor}
+  //               alt={candyColor}
+  //               data-id={index}
+  //               draggable={true}
+  //               onDragStart={dragStart}
+  //               onDragOver={(e) => e.preventDefault()}
+  //               onDragEnter={(e) => e.preventDefault()}
+  //               onDragLeave={(e) => e.preventDefault()}
+  //               onDrop={dragDrop}
+  //               onDragEnd={dragEnd}
+  //             />
+  //           ))}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
 export default CandyCrush;
 
