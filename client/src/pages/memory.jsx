@@ -5,51 +5,51 @@ const MemoryGame = () => {
     const [cardArray, setCardArray] = useState([
         {
             name: 'puppy-paw',
-            img: 'images/Dog paw-pana.png',
+            img: '../assets/images/Dog paw-pana.png',
         },
         {
             name: 'polarBear',
-            img: 'images/Ice melting-bro.png',
+            img: '../assets/images/Ice melting-bro.png',
         },
         {
             name: 'penguin',
-            img: 'images/Penguin family-bro.png',
+            img: '../assets/images/Penguin family-bro.png',
         },
         {
             name: 'cat',
-            img: 'images/Playful cat-cuate.png',
+            img: '../assets/images/Playful cat-cuate.png',
         },
         {
             name: 'bat',
-            img: 'images/Sleeping bat-rafiki.png',
+            img: '../assets/images/Sleeping bat-rafiki.png',
         },
         {
             name: 'unicorn',
-            img: 'images/Unicorn with rainbow-rafiki.png',
+            img: '../assets/images/Unicorn with rainbow-rafiki.png',
         },
         {
             name: 'puppy-paw',
-            img: 'images/Dog paw-pana.png',
+            img: '../assets/images/Dog paw-pana.png',
         },
         {
             name: 'polarBear',
-            img: 'images/Ice melting-bro.png',
+            img: '../assets/images/Ice melting-bro.png',
         },
         {
             name: 'penguin',
-            img: 'images/Penguin family-bro.png',
+            img: '../assets/images/Penguin family-bro.png',
         },
         {
             name: 'cat',
-            img: 'images/Playful cat-cuate.png',
+            img: '../assets/images/Playful cat-cuate.png',
         },
         {
             name: 'bat',
-            img: 'images/Sleeping bat-rafiki.png',
+            img: '../assets/images/Sleeping bat-rafiki.png',
         },
         {
             name: 'unicorn',
-            img: 'images/Unicorn with rainbow-rafiki.png',
+            img: '../assets/images/Unicorn with rainbow-rafiki.png',
         },
     ]);
     useEffect(() => {
@@ -67,7 +67,7 @@ const MemoryGame = () => {
     
         for (let i = 0; i < cardArray.length; i++) {
           const card = document.createElement('img');
-          card.setAttribute('src', 'images/Arcade machine-amico.png');
+          card.setAttribute('src', '../assetsimages/Arcade machine-amico.png');
           card.setAttribute('data-id', i);
           card.addEventListener('click', flipCard);
           grid.appendChild(card);
@@ -80,17 +80,17 @@ const MemoryGame = () => {
         const optionTwoId = cardsChosenId[1];
     
         if (optionOneId == optionTwoId) {
-          cards[optionOneId].setAttribute('src', 'images/Arcade machine-amico.png');
-          cards[optionTwoId].setAttribute('src', 'images/Arcade machine-amico.png');
+          cards[optionOneId].setAttribute('src', '../assets/images/Arcade machine-amico.png');
+          cards[optionTwoId].setAttribute('src', '../assets/images/Arcade machine-amico.png');
         } else if (cardsChosen[0] === cardsChosen[1]) {
-          cards[optionOneId].setAttribute('src', 'images/white.png');
-          cards[optionTwoId].setAttribute('src', 'images/white.png');
+          cards[optionOneId].setAttribute('src', '../assets/images/white.png');
+          cards[optionTwoId].setAttribute('src', '../assets/images/white.png');
           cards[optionOneId].removeEventListener('click', flipCard);
           cards[optionTwoId].removeEventListener('click', flipCard);
           setCardsWon([...cardsWon, cardsChosen]);
         } else {
-          cards[optionOneId].setAttribute('src', 'images/Arcade machine-amico.png');
-          cards[optionTwoId].setAttribute('src', 'images/Arcade machine-amico.png');
+          cards[optionOneId].setAttribute('src', '../assets/images/Arcade machine-amico.png');
+          cards[optionTwoId].setAttribute('src', '../assets/images/Arcade machine-amico.png');
         }
     
         setCardsChosen([]);
