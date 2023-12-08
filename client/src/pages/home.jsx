@@ -42,7 +42,7 @@ function home() {
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={machine} />
           <Card.Body>
-            <Link to="">
+            <Link to="/">
               <Card.Title>Tic Tac Toe</Card.Title>
             </Link>
             <Card.Text>

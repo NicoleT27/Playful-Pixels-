@@ -9,6 +9,7 @@ import './pages/candy.css'
 import Home from './pages/home';
 import Login from './pages/loginPage';
 import Signup from './pages/signup';
+import Header from './components/Header/Header';
 import Navbar from './components/Navigation/Navbar';
 import CandyCrush from './pages/candy';
 import MemoryGame from './pages/memory';
@@ -23,6 +24,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      <Header />
         <Navbar />
         <div className='pages'>
           <Routes>

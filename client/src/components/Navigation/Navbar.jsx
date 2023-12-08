@@ -19,9 +19,9 @@ const Navbar = () => {
   return (
     <header className="navBar">
       <div className="container">
-        <Link to="/">
+        {/* <Link to="/">
           <h1 className="title">Playful Pixels</h1>
-        </Link>
+        </Link> */}
         <nav>
           {/* if user is logged in... */}
           {user && (
@@ -29,9 +29,9 @@ const Navbar = () => {
               <div>{user.email}</div>
               {/* for now, regardless of whether the user is logged in or out, the nav bar will display all games... this is while we are in the development stage. */}
               <button onClick={handleClick}>Log out</button>
-              <Link to="/candy">Candy Crush</Link>
+              {/* <Link to="/candy">Candy Crush</Link>
               <Link to="/memory">Memory Game</Link>
-              <Link to="">Tic Tac Toe</Link>
+              <Link to="">Tic Tac Toe</Link> */}
             </div>
           )}
 
@@ -41,9 +41,9 @@ const Navbar = () => {
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
               {/* for now, regardless of whether the user is logged in or out, the nav bar will display all games... this is while we are in the development stage. */}
-              <Link to="/candy">Candy Crush</Link>
+              {/* <Link to="/candy">Candy Crush</Link>
               <Link to="/memory">Memory Game</Link>
-              <Link to="">Tic Tac Toe</Link>
+              <Link to="">Tic Tac Toe</Link> */}
             </div>
           )}
         </nav>
