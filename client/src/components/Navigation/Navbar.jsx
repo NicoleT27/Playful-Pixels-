@@ -1,10 +1,9 @@
 // import React from 'react'
-import './Navbar.css'
+import "./Navbar.css";
 
-
-import { Link } from 'react-router-dom';
-import { useLogout } from '../../hooks/useLogout';
-import { useAuthContext } from '../../hooks/useAuthContext';
+import { Link } from "react-router-dom";
+import { useLogout } from "../../hooks/useLogout";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 // const Navbar = () => {
 //   return (
@@ -14,7 +13,6 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
 const Navbar = () => {
-
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
@@ -22,12 +20,11 @@ const Navbar = () => {
     logout();
   };
 
-
   return (
     <header className="navBar">
       <div className="container">
         <Link to="/">
-          <h1 className="title">Playful Pixels </h1>
+          <h1 className="title">Playful Pixels</h1>
         </Link>
         <nav>
           {/* if user is logged in... */}
@@ -57,7 +54,6 @@ const Navbar = () => {
       </div>
     </header>
   );
-}
+};
 
-
-export default Navbar
+export default Navbar;
