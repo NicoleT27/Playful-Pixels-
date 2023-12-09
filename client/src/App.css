@@ -1,6 +1,7 @@
 body  {
   background-image: url('../src/assets/images/arcade2.png');
   background-size:100%;
+  background-repeat: no-repeat;
 }
 div{
   margin-left: 20px;
