@@ -1,9 +1,12 @@
 import React from 'react'
-import arcadeMachine from '../assets/images/Arcade machine-amico.png'
+import blank from '../assets/images/white.png'
 
-const SingleCard = ({ card, handleChoice, flipped }) => {
+const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
     const handleClick = () => {
-        handleChoice(card)
+        if (!disabled) {
+            handleChoice(card)
+        }
+
     }
     return (
         <div>
@@ -12,7 +15,7 @@ const SingleCard = ({ card, handleChoice, flipped }) => {
                     <img className='front' src={card.src} />
                     <img
                         className='back'
-                        src={arcadeMachine}
+                        src={blank}
                         onClick={handleClick} />
                 </div>
             </div>

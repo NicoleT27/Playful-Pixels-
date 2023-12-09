@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './memory.css';
+// import Button from 'react-bootstrap/Button';
 import SingleCard from './SingleCard';
 import puppyPaw from '../assets/images/Dog paw-pana.png';
 import polarBear from '../assets/images/Ice melting-bro.png';
@@ -22,6 +23,7 @@ const memory = () => {
     const [turns, setTurns] = useState(0)
     const [choiceOne, setChoiceOne] = useState(null)
     const [choiceTwo, setChoiceTwo] = useState(null)
+    const [disabled, setDisabled] = useState(false)
 
 
     //shuffle cards
@@ -42,6 +44,7 @@ const memory = () => {
     // matching cards 
     useEffect(() => {
         if (choiceOne && choiceTwo) {
+            setDisabled(true)
             if (choiceOne.src === choiceTwo.src) {
                 setCards(prevCards => {
                     return prevCards.map(card => {
@@ -55,7 +58,7 @@ const memory = () => {
                 resetTurn()
             } else {
 
-                setTimeout(() =>  resetTurn(), 1000)
+                setTimeout(() => resetTurn(), 1000)
             }
         }
     }, [choiceOne, choiceTwo])
@@ -67,13 +70,14 @@ const memory = () => {
         setChoiceOne(null);
         setChoiceTwo(null);
         setTurns(prevTurns => prevTurns = 1);
+        setDisabled(false);
     }
 
 
     return (
         <div className='game'>
             <h1>Memory Game</h1>
-            <button onClick={cardShuffle}>New Game</button>
+            <button className='button' onClick={cardShuffle}>New Game</button>
 
             <div className='grid'>
                 {cards.map(card => (
@@ -82,6 +86,7 @@ const memory = () => {
                         card={card}
                         handleChoice={handleChoice}
                         flipped={card === choiceOne || card === choiceTwo || card.matched}
+                        disabled={disabled}
                     />
                 ))}
             </div>
