@@ -2,11 +2,11 @@
 
 
 body  {
-    background-color: black;
-    /* color: white;
-    font-family: 'Orbitron', sans-serif; */
-    /* margin: 0;
-    padding: 0; */
+    /* background-color: black;  */
+    color: white;
+    font-family: 'Orbitron', sans-serif; 
+     margin: 0;
+    padding: 0; 
   }
   .navBar {
     background-color: #282A2B;
@@ -14,13 +14,13 @@ body  {
     padding: 10px 0;
   }
 
-  .container {
+  /* .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 20px;
-  }
+  } */
 
   nav {
     display: flex;
@@ -29,13 +29,13 @@ body  {
   .links  {
     display: flex;
     gap: 20px;
-    float: left;
+    
   }
   .links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    /* font-size: 16px; */
+    font-size: 40px;
     transition: color 0.3s ease;
   }
   .links a:hover {

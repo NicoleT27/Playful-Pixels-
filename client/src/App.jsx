@@ -11,7 +11,7 @@ import Home from './pages/home';
 import Login from './pages/loginPage';
 import Signup from './pages/signup';
 import Header from './components/Header/Header';
-import Navbar from './components/Navigation/Navbar';
+// import Navbar from './components/Navigation/Navbar';
 import CandyCrush from './pages/candy';
 import MemoryGame from './pages/memory';
 import TicTacToe from './pages/tic-tac-toe';
@@ -32,7 +32,7 @@ function App() {
       
       <BrowserRouter>
         <Header />
-        <Navbar />
+        {/* <Navbar /> */}
         <div className='pages'>
           <Routes>
             {/* if user, navigate to home; if no user, navigate to login page */}
