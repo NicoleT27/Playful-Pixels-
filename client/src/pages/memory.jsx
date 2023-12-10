@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './memory.css';
-// import Button from 'react-bootstrap/Button';
 import SingleCard from './SingleCard';
 import puppyPaw from '../assets/images/Dog paw-pana.png';
 import polarBear from '../assets/images/Ice melting-bro.png';

@@ -3,26 +3,23 @@
 .game {
   font-family: 'Orbitron', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-#result {
-  font-family: 'Orbitron', sans-serif;
-  color: #BB68C9;
-}
 
 .button {
-  background-color: #BB68C9;
-  color: aliceblue;
+  background-color: aliceblue;
+  color: black;
   border-radius: 8px;
   width: 150px;
   height: 50px;
 }
+.button:hover{
+  background-color: #BB68C9;
+  color: aliceblue;
+}
 .grid {
-  /* display: flex;
-  flex-wrap: wrap; */
-  /* width: 800px;
-  height: 600px; */
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
