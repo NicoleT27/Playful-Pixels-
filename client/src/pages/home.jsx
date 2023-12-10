@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import './home.css'
 import machine from '../assets/images/Arcade machine-amico.png';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 function home() {
   return (
