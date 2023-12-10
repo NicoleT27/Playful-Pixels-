@@ -6,9 +6,37 @@ body  {
     color: white;
     font-family: 'Orbitron', sans-serif;
   }
+  .navBar {
+    background-color: #282A2B;
+    color: white;
+    padding: 10px 0;
+  }
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title {
+    font-size: 24px;
+    margin: 0;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
   .links  {
     display: flex;
     gap: 20px;
   }
- 
+  .links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    /* font-size: 16px; */
+    transition: color 0.3s ease;
+  }
+  .links a:hover {
+    color: #ffcc00; /* Change the color on hover */
+  }
+  

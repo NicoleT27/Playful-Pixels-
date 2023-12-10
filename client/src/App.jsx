@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext';
 
 //Is this being used for anything? Alejandra Commented it out to check on other functionality
-  //Feel free to put it back
+//Feel free to put it back
 // import { useState } from 'react'
 
 import './App.css'
@@ -29,28 +29,29 @@ function App() {
 
   return (
     <div>
+      
       <BrowserRouter>
-      <Header />
         <Navbar />
+        <Header />
         <div className='pages'>
           <Routes>
             {/* if user, navigate to home; if no user, navigate to login page */}
-            <Route path = "/" element = {user ? <Home/>: <Navigate to='/login'/>} />
+            <Route path="/" element={user ? <Home /> : <Navigate to='/login' />} />
 
             {/* if no user, navigate to login; if user, navigate to home */}
-            <Route path = "/login" element = {!user ? <Login/> : <Navigate to='/' />} />
+            <Route path="/login" element={!user ? <Login /> : <Navigate to='/' />} />
 
-             {/* if no user, navigate to signup; if user, navigate to home */}
-            <Route path = "/signup" element = {!user ? <Signup/> : <Navigate to='/' />} />
+            {/* if no user, navigate to signup; if user, navigate to home */}
+            <Route path="/signup" element={!user ? <Signup /> : <Navigate to='/' />} />
 
             {/* if user, navigate to candy crush game; if no user, navigate to login page */}
-            <Route path="/candy" element = {user ? <CandyCrush/>:  <Navigate to='/login'/>}/>
+            <Route path="/candy" element={user ? <CandyCrush /> : <Navigate to='/login' />} />
 
             {/* if user, navigate to memory game, if no user; navigate to login page */}
-            <Route path="/memory" element = {user ? <MemoryGame/> : <Navigate to='/login'/>}/>
+            <Route path="/memory" element={user ? <MemoryGame /> : <Navigate to='/login' />} />
 
             {/* if user, navigate to tic tac toe game, if no user; navigate to login page */}
-            <Route path="/ticTacToe" element = {<TicTacToe/>}/>
+            <Route path="/ticTacToe" element={<TicTacToe />} />
 
           </Routes>
         </div>

@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
-
+import
 
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
@@ -27,11 +27,7 @@ const Navbar = () => {
           {user && (
             <div>
               <div>{user.email}</div>
-              {/* for now, regardless of whether the user is logged in or out, the nav bar will display all games... this is while we are in the development stage. */}
               <button onClick={handleClick}>Log out</button>
-              {/* <Link to="/candy">Candy Crush</Link>
-              <Link to="/memory">Memory Game</Link>
-              <Link to="">Tic Tac Toe</Link> */}
             </div>
           )}
 
@@ -40,10 +36,6 @@ const Navbar = () => {
             <div className="links">
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
-              {/* for now, regardless of whether the user is logged in or out, the nav bar will display all games... this is while we are in the development stage. */}
-              {/* <Link to="/candy">Candy Crush</Link>
-              <Link to="/memory">Memory Game</Link>
-              <Link to="">Tic Tac Toe</Link> */}
             </div>
           )}
         </nav>
