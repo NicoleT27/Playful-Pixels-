@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
-import
+// import machine from '../../assets/images/Arcade machine-amico.png';
 
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
@@ -19,9 +19,6 @@ const Navbar = () => {
   return (
     <header className="navBar">
       <div className="container">
-        {/* <Link to="/">
-          <h1 className="title">Playful Pixels</h1>
-        </Link> */}
         <nav>
           {/* if user is logged in... */}
           {user && (
@@ -34,6 +31,7 @@ const Navbar = () => {
           {/* if user is logged out... */}
           {!user && (
             <div className="links">
+              <Link to="/">Home</Link>
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
             </div>

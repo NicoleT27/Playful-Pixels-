@@ -31,8 +31,8 @@ function App() {
     <div>
       
       <BrowserRouter>
-        <Navbar />
         <Header />
+        <Navbar />
         <div className='pages'>
           <Routes>
             {/* if user, navigate to home; if no user, navigate to login page */}

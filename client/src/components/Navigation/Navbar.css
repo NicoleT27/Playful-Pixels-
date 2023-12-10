@@ -5,6 +5,8 @@ body  {
     background-color: black;
     color: white;
     font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
   }
   .navBar {
     background-color: #282A2B;
@@ -16,11 +18,10 @@ body  {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0 20px;
   }
-  .title {
-    font-size: 24px;
-    margin: 0;
-  }
+
   nav {
     display: flex;
     align-items: center;
@@ -28,6 +29,7 @@ body  {
   .links  {
     display: flex;
     gap: 20px;
+    float: left;
   }
   .links a {
     color: white;
@@ -37,6 +39,6 @@ body  {
     transition: color 0.3s ease;
   }
   .links a:hover {
-    color: #ffcc00; /* Change the color on hover */
+    color: #FC914F; 
   }
   
