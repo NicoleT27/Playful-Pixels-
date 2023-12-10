@@ -1,5 +1,6 @@
 import React from "react";
 import Square from "./Square";
+import { calculateWinner } from "../utils/helpers";
 
 function Board() {
 
@@ -8,6 +9,10 @@ function Board() {
 
     const handleClick = (index) => {
         const newSquares = [...squares]; // Create a copy of the squares array
+
+        if(calculateWinner(newSquares) || newSquares[index]) {
+            return
+        }
     
         if (newSquares[index] === null) { // Check if the square is already filled
             newSquares[index] = isX ? 'X' : 'O'; // Update the copied array
@@ -15,6 +20,20 @@ function Board() {
             setIsX(!isX); // Toggle the X/O value
         }
     } 
+
+    const handleRestart = () => {
+        setIsX(true);
+        setSquares(Array(9).fill(null))
+    }
+
+    const winner = calculateWinner(squares);
+    let status;
+
+    if (winner) {
+        status = `Winner: ${winner}`;
+    } else {
+        status = `It is ${isX ? 'X' : 'O'}'s turn`;
+    }
 
     return (
         <div className="board">
@@ -33,6 +52,8 @@ function Board() {
                 <Square value={squares[7]} onClick = {() => handleClick(7)}/>
                 <Square value={squares[8]} onClick = {() => handleClick(8)}/>
             </div>
+            <div className="status">{status}</div>
+            <button className="restart" onClick={handleRestart}>Restart Game</button>
         </div>
     )
 }
