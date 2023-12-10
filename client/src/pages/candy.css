@@ -1,8 +1,8 @@
 
 .app{
-    /* display: flex; */
+    display: flex;
     padding: 30px;
-    /* justify-content: center; */
+    justify-content: center;
    
 }
 .game{

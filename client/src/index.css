@@ -20,6 +20,7 @@ a {
 }
 a:hover {
   color:rgb(241, 146, 146);
+   transition:color 0.5s ease
 }
 .links{
   font-size: 2em;
@@ -50,7 +51,8 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  /* border-color: #646cff; */
+  border-color: #0C5966;
 }
 button:focus,
 button:focus-visible {

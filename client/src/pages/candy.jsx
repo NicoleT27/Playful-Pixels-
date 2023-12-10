@@ -1,7 +1,5 @@
 const width = 8
 import { useEffect, useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCandyCane } from "@fortawesome/free-solid-svg-icons";
 import redCandy from '../assets/images/red-candy.png'
 import pinkCandy from "../assets/images/pink-candy.png"
 import orangeCandy from "../assets/images/orange-candy.png"
@@ -188,10 +186,7 @@ setCurrentColorArrangement([...currentColorArrangement])
 
   return (
     <div>
-      <div className="welcome">
-        Welcome to Candy Crush
-        {/* <FontAwesomeIcon icon={faCandyCane} /> */}
-      </div>
+      <div className="welcome">🍬Welcome to Candy Crush!🍬</div>
 
       <div className="app">
         <div className="game">
