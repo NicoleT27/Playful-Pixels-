@@ -14,6 +14,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navigation/Navbar';
 import CandyCrush from './pages/candy';
 import MemoryGame from './pages/memory';
+import TicTacToe from './pages/tic-tac-toe';
 
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
 
             {/* if user, navigate to memory game, if no user; navigate to login page */}
             <Route path="/memory" element = {user ? <MemoryGame/> : <Navigate to='/login'/>}/>
+
+            {/* if user, navigate to tic tac toe game, if no user; navigate to login page */}
+            <Route path="/ticTacToe" element = {<TicTacToe/>}/>
+
           </Routes>
         </div>
       </BrowserRouter>
