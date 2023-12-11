@@ -1,42 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-
-
-body  {
-    background-color: black;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-  }
-  .navBar {
-    background-color: #282A2B;
-    color: white;
-    padding: 10px 0;
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .title {
-    font-size: 24px;
-    margin: 0;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  .links  {
-    display: flex;
-    gap: 20px;
-  }
-  .links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    /* font-size: 16px; */
-    transition: color 0.3s ease;
-  }
-  .links a:hover {
-    color: #ffcc00; /* Change the color on hover */
-  }
+/* body {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
   
+} */
+
+.navBar {
+  background-color: #282A2B;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #FC914F;
+}
+
+@media (max-width: 320px) {
+  .links a {
+      font-size: 20px;
+  }
+}
+
+/* responsive behavior for small screens  */
+@media (min-width: 321px) and (max-width: 575px) {
+  .links a {
+      font-size: 28px;
+  }
+}
+
+/* responsive behavior for medium sized screens (tablets)  */
+@media (min-width: 576px) and (max-width: 992px) {
+  .links a {
+      font-size: 35px;
+  }
+}
+
+
