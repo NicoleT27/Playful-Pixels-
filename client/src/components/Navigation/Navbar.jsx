@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
-import
+import machine from '../../assets/images/Arcade machine-amico.png';
 
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
@@ -36,6 +36,7 @@ const Navbar = () => {
             <div className="links">
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
+              <Link to="/">{machine}</Link>
             </div>
           )}
         </nav>
