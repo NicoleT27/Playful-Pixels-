@@ -1,5 +1,5 @@
 .square {
-    /* background-color: black; */
+    background-color: inherit;
     height: 150px;
     width: 150px;
     padding: 0px;
@@ -20,8 +20,19 @@
     justify-content: center;
 }
 
-.first {
-    border-style: solid;
-    border-right: 5px;
-    border-color: black
+.boxDecoration {
+    background-color: none;
 }
+
+.right {
+    /* border-style: solid; */
+    border-right: 10px solid black;
+}
+
+.top {
+    border-top: 10px solid black;
+}
+
+
+
+
