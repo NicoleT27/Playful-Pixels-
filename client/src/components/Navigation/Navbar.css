@@ -18,15 +18,21 @@
   align-items: center;
   width: 100%;
   padding: 0 20px;
+  
 }
-
+.log-out  {
+  display: flex;
+  gap: 10px;
+}
 nav {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .links {
   display: flex;
+  justify-content: space-between;
   gap: 100px;
   padding-bottom: 35px;
 }
