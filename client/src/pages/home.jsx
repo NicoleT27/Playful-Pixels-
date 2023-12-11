@@ -13,7 +13,7 @@ function home() {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={candyCrush} />
           <Card.Body>
-            <Card.Title className="gameTitle">Candy Crush</Card.Title>
+            <Card.Title className="gameTitle">🍭Candy Crush</Card.Title>
             <Card.Text></Card.Text>
             <Link to="/candy">
               <Button variant="primary" className="gameBtn">
@@ -29,7 +29,7 @@ function home() {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={machine} />
           <Card.Body>
-            <Card.Title className="gameTitle">Memory Game</Card.Title>
+            <Card.Title className="gameTitle">🧠Memory Game</Card.Title>
             <Card.Text></Card.Text>
             <Link to="/memory">
               <Button variant="primary" className="gameBtn">
@@ -45,7 +45,7 @@ function home() {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={machine} />
           <Card.Body>
-            <Card.Title className="gameTitle">Tic Tac Toe</Card.Title>
+            <Card.Title className="gameTitle">❌⭕Tic Tac Toe</Card.Title>
             <Card.Text></Card.Text>
             <Link to="/ticTacToe">
               <Button variant="primary" className="gameBtn">

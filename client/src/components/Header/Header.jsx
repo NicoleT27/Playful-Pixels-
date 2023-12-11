@@ -14,23 +14,24 @@
 
 // export default header
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import NavBar from '../Navigation/Navbar';
-import './header.css'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React from "react";
+import { Link } from "react-router-dom";
+import NavBar from "../Navigation/Navbar";
+import "./header.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function header() {
   return (
     <>
       <Container>
-        <Row className="row" >
+        <Row className="row">
           <Col className="col">
-            <h1 className='PP' >
-              Welcome to Playful Pixels
-              </h1>
+            <h1 class="neon" data-text="U">
+              Welcome<span class="flicker-slow">to</span>Playful
+              <span class="flicker-fast">Pixels</span>!
+            </h1>
           </Col>
         </Row>
       </Container>
