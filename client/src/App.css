@@ -13,9 +13,9 @@ body {
 }
 
 
-div {
+/* div {
   margin-left: 20px;
-}
+} */
 
 /* responsive behavior for very small screens  */
 @media (max-width: 375px) {

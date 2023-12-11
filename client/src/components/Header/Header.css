@@ -32,13 +32,13 @@
 /* responsive behavior for medium sized screens (tablets)  */
 @media (min-width: 576px) and (max-width: 992px) {
     .PP {
-        font-size: 58px;
+        font-size: 65px;
     }
 }
 
 /* responsive behavior for small desktops and larger  */
-@media (min-width: 993px) {
+@media (min-width: 993px) and (max-width: 1280px) {
     .PP {
-        font-size: 200px;
+        font-size: 100px;
     }
 }

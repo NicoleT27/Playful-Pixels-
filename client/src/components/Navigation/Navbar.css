@@ -43,28 +43,23 @@ nav {
 }
 
 @media (max-width: 320px) {
-  .links {
-      font-size: 24px;
+  .links a {
+      font-size: 20px;
   }
 }
 
 /* responsive behavior for small screens  */
 @media (min-width: 321px) and (max-width: 575px) {
-  .links {
-      font-size: 37px;
+  .links a {
+      font-size: 28px;
   }
 }
 
 /* responsive behavior for medium sized screens (tablets)  */
 @media (min-width: 576px) and (max-width: 992px) {
-  .links {
-      font-size: 58px;
+  .links a {
+      font-size: 35px;
   }
 }
 
-/* responsive behavior for small desktops and larger  */
-@media (min-width: 993px) {
-  .links {
-      font-size: 200px;
-  }
-}
+
