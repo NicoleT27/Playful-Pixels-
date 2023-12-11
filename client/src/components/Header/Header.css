@@ -64,28 +64,28 @@
 
 /* responsive behavior for very small screens  */
 @media (max-width: 320px) {
-  .PP {
+  .neon {
     font-size: 24px;
   }
 }
 
 /* responsive behavior for small screens  */
 @media (min-width: 321px) and (max-width: 575px) {
-  .PP {
+  .neon {
     font-size: 37px;
   }
 }
 
 /* responsive behavior for medium sized screens (tablets)  */
 @media (min-width: 576px) and (max-width: 992px) {
-  .PP {
+  .neon {
     font-size: 65px;
   }
 }
 
 /* responsive behavior for small desktops and larger  */
 @media (min-width: 993px) and (max-width: 1280px) {
-  .PP {
+  .neon {
     font-size: 80px;
   }
 }
