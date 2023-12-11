@@ -3,6 +3,11 @@
     justify-content: center;
     flex-direction: row;
 }
+.gameTitle {
+    margin-left: 3em;
+    padding: 10px;
+}
+
 @media (max-width: 800px) {
     .flex-container{
         flex-direction: column;

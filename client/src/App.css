@@ -2,7 +2,7 @@
 
 body {
   background-image: url('../src/assets/images/arcade2.png');
-  background-size: 100%;
+  background-size:cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -11,11 +11,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
-/* div {
-  margin-left: 20px;
-} */
 
 /* responsive behavior for very small screens  */
 @media (max-width: 375px) {
@@ -42,5 +37,6 @@ body {
 @media (min-width: 993px) {
   body {
     background-size: cover;
+    overflow-x: hidden;
   }
 } 

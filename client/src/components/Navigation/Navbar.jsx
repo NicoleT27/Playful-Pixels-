@@ -23,7 +23,7 @@ const Navbar = () => {
         <nav>
           {/* if user is logged in... */}
           {user && (
-            <div>
+            <div className="log-out">
               <div>{user.email}</div>
               <button onClick={handleClick}>Log out</button>
             </div>

@@ -37,6 +37,8 @@ nav {
   font-weight: bold;
   font-size: 40px;
   transition: color 0.3s ease;
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: black;
 }
 
 .links a:hover {

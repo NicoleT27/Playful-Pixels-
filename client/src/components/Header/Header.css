@@ -9,10 +9,13 @@
 .PP {
     display: inline-block;
     vertical-align: middle;
-    font-size: 200px;
     margin: 0;
-    padding: 10px;
-
+    padding: 5px;
+    font-size: 105px;
+    -webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: black;
+    margin-bottom: 50px;
+    
 }
 
 /* responsive behavior for very small screens  */
@@ -39,6 +42,6 @@
 /* responsive behavior for small desktops and larger  */
 @media (min-width: 993px) and (max-width: 1280px) {
     .PP {
-        font-size: 100px;
+        font-size: 80px;
     }
 }

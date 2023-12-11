@@ -29,7 +29,7 @@ function loginForm() {
                     <input class="form-input form-control" type="password" onChange={(e) => setPassword(e.target.value)} value={password}/>
                 </div>
 
-                <button disabled = {isLoading} type="submit">Submit</button>
+                <button  className="submitBtn" disabled = {isLoading} type="submit ">Submit</button>
                 {error && <div className='error'>{error}</div>}
             </form>
         </div>

@@ -75,8 +75,8 @@ const memory = () => {
 
     return (
         <div className='game'>
-            <h1>Memory Game</h1>
-            <button className='button' onClick={cardShuffle}>New Game</button>
+            <h1 className='memory' >Memory Game</h1>
+            <button className='mem-button' onClick={cardShuffle}>New Game</button>
 
             <div className='grid'>
                 {cards.map(card => (

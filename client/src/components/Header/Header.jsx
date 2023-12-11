@@ -29,9 +29,7 @@ function header() {
         <Row className="row" >
           <Col className="col">
             <h1 className='PP' >
-              <Link to="/">
-              Playful Pixels
-              </Link>
+              Welcome to Playful Pixels
               </h1>
           </Col>
         </Row>

@@ -5,17 +5,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-
-.button {
+h1{
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+}
+.mem-button {
   background-color: aliceblue;
   color: black;
   border-radius: 8px;
   width: 150px;
   height: 50px;
 }
-.button:hover{
+.mem-button:hover{
   background-color: #BB68C9;
   color: aliceblue;
 }
