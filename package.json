@@ -4,7 +4,7 @@
   "description": "A game lobby hosting multiple games.",
   "main": "index.js",
   "scripts": {
-    "install": "cd server && npm install && cd ../client && npm install ",
+    "install": "cd server && npm install && cd client && npm install ",
     "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
