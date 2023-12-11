@@ -189,7 +189,7 @@ setCurrentColorArrangement([...currentColorArrangement])
       <div className="welcome">🍬Welcome to Candy Crush!🍬</div>
 
       <div className="app">
-        <div className="game">
+        <div className="candyGame">
           {currentColorArrangement.map((candyColor, index) => (
             <img
               key={index}
