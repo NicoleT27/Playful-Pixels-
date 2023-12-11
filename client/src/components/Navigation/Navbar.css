@@ -1,43 +1,70 @@
-
-
-
-body  {
-    color: white;
-    font-family: 'Orbitron', sans-serif; 
-     margin: 0;
-    padding: 0; 
-  }
-  .navBar {
-    background-color: #282A2B;
-    color: white;
-    padding: 10px 0;
-  }
-
-  /* .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px;
-  } */
-
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  .links  {
-    display: flex;
-    gap: 20px;
-    
-  }
-  .links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 40px;
-    transition: color 0.3s ease;
-  }
-  .links a:hover {
-    color: #FC914F; 
-  }
+/* body {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
   
+} */
+
+.navBar {
+  background-color: #282A2B;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #FC914F;
+}
+
+@media (max-width: 320px) {
+  .links {
+      font-size: 24px;
+  }
+}
+
+/* responsive behavior for small screens  */
+@media (min-width: 321px) and (max-width: 575px) {
+  .links {
+      font-size: 37px;
+  }
+}
+
+/* responsive behavior for medium sized screens (tablets)  */
+@media (min-width: 576px) and (max-width: 992px) {
+  .links {
+      font-size: 58px;
+  }
+}
+
+/* responsive behavior for small desktops and larger  */
+@media (min-width: 993px) {
+  .links {
+      font-size: 200px;
+  }
+}

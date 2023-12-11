@@ -26,8 +26,8 @@ function header() {
   return (
     <>
       <Container>
-        <Row className='mb-0' >
-          <Col className="pb-0">
+        <Row className="row" >
+          <Col className="col">
             <h1 className='PP' >
               <Link to="/">
               Playful Pixels

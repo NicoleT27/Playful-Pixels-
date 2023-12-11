@@ -16,3 +16,31 @@ body {
 div {
   margin-left: 20px;
 }
+
+/* responsive behavior for very small screens  */
+@media (max-width: 375px) {
+  body {
+    background-size: cover;
+  }
+}
+
+
+@media (min-width: 376px) and (max-width: 575px) {
+  body {
+    background-size: cover;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+  body {
+    background-size: cover;
+  }
+}
+
+
+@media (min-width: 993px) {
+  body {
+    background-size: cover;
+  }
+} 
