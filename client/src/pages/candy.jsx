@@ -7,7 +7,6 @@ import yellowCandy from "../assets/images/yellow-candy.png"
 import greenCandy from "../assets/images/green-candy.png"
 import rainbowCandy from "../assets/images/rainbow-candy.png";
 import blank from '../assets/images/blank.png'
-
 const width = 8;
 
 
@@ -233,7 +232,7 @@ const CandyCrush = () => {
 
   return (
     <div>
-      <div className="welcome">🍬Welcome to Candy Crush!🍬</div>
+      <div className="welcome">🍬Candy Crush🍬</div>
       {showButton && (
         <button className="candy-button" onClick={startGame}>
           Start Game
@@ -264,5 +263,6 @@ const CandyCrush = () => {
     </div>
   );
 }
+
 export default CandyCrush;
 

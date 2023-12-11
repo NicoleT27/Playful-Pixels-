@@ -30,7 +30,7 @@ function header() {
           <Col className="col">
             <h1 class="neon" data-text="U">
               Welcome<span class="flicker-slow">to</span>Playful
-              <span class="flicker-fast">Pixels</span>!
+              <span class="flicker-fast">Pixels</span>
             </h1>
           </Col>
         </Row>

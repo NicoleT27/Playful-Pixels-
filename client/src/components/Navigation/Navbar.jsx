@@ -4,12 +4,14 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
 
 import machine from '../../assets/images/Arcade machine-amico.png';
 
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
-const Navbar = () => {
+const Navigation = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
@@ -20,32 +22,39 @@ const Navbar = () => {
   return (
     <container className="navBar">
       <div className="container">
-        <nav>
+        <Navbar className="bg-body-tertiary">
           {/* if user is logged in... */}
           {user && (
             <div className="log-out">
-              <div>{user.email}</div>
+              <Container>
+                <Navbar.Text>
+                  Signed in as:{" "}
+                  <a href="#login">
+                    <div>{user.email}</div>
+                  </a>
+                </Navbar.Text>
+              </Container>
+
               <Link to="/">Home</Link>
               <button onClick={handleClick}>Log out</button>
             </div>
           )}
-
-          {/* if user is logged out... */}
-          {!user && (
-            <div className="links">
-              {/* <Link to="/">Home</Link> */}
-              <Link to="/login">🕹️Login</Link>
-              <Link to="/signup">🎮Signup</Link>
-              {/* <Link to="/">{machine.png}</Link> */}
-            </div>
-          )}
-        </nav>
+        </Navbar>
+        {/* if user is logged out... */}
+        {!user && (
+          <div className="links">
+            {/* <Link to="/">Home</Link> */}
+            <Link to="/login">🕹️Login</Link>
+            <Link to="/signup">🎮Signup</Link>
+            {/* <Link to="/">{machine.png}</Link> */}
+          </div>
+        )}
       </div>
     </container>
   );
 };
 
-export default Navbar;
+export default Navigation;
 
 // I was trying to make the navbar look more like a navbar lol I didn't have a lot of luck --Mads 
 

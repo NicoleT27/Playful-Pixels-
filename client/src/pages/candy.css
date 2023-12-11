@@ -19,10 +19,10 @@
 }
 
 .welcome {
-    font-size: 30px;
+    font-size: 70px;
     text-align: center;
-    -webkit-text-stroke-width: 1px; 
-    -webkit-text-stroke-color: black;
+    /* -webkit-text-stroke-width: 1px; 
+    -webkit-text-stroke-color: black; */
 }
 body::-webkit-scrollbar {
   width: 12px; 
@@ -42,6 +42,8 @@ body::-webkit-scrollbar-track {
   border-radius: 8px;
   width: 150px;
   height: 50px;
+  margin-left: 35em;
+  margin-top: 30px;
 }
 .candy-button:hover{
     background-color: #F62163;
