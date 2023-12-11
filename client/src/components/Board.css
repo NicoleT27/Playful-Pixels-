@@ -1,0 +1,27 @@
+.square {
+    /* background-color: black; */
+    height: 150px;
+    width: 150px;
+    padding: 0px;
+}
+
+.board {
+    justify-content: center;
+    /* background-color: blueviolet; */
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.ticTacToeRow {
+    display: flex;
+    justify-content: center;
+}
+
+.first {
+    border-style: solid;
+    border-right: 5px;
+    border-color: black
+}

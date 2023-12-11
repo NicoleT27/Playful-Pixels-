@@ -1,6 +1,44 @@
-.header {
-    display: flex;
-    justify-content: center;
-    font-size: 60px;
+.row {
+    margin-bottom: 0;
 }
 
+.col {
+    padding-bottom: 0;
+}
+
+.PP {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 200px;
+    margin: 0;
+    padding: 10px;
+
+}
+
+/* responsive behavior for very small screens  */
+@media (max-width: 320px) {
+    .PP {
+        font-size: 24px;
+    }
+}
+
+/* responsive behavior for small screens  */
+@media (min-width: 321px) and (max-width: 575px) {
+    .PP {
+        font-size: 37px;
+    }
+}
+
+/* responsive behavior for medium sized screens (tablets)  */
+@media (min-width: 576px) and (max-width: 992px) {
+    .PP {
+        font-size: 65px;
+    }
+}
+
+/* responsive behavior for small desktops and larger  */
+@media (min-width: 993px) and (max-width: 1280px) {
+    .PP {
+        font-size: 100px;
+    }
+}

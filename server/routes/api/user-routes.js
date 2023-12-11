@@ -2,11 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const User = require ('../../models/User');
 const jwt = require('jsonwebtoken');
+const requireAuth = require('../../middleware/requireAuth');
+
 
 // const require('dotenv').config();
 
 const createToken = (userId) => {
-    return jwt.sign({_id: userId}, process.env.SESSIONSECRET, { expiresIn: 5});
+    return jwt.sign({_id: userId}, process.env.SESSIONSECRET, { expiresIn: '5d'});
 }
 
 const router = express.Router();
@@ -66,6 +68,9 @@ router.post('/signup', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+
+router.use(requireAuth);
 
 
 // function to get all registered users

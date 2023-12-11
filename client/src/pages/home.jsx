@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import './home.css'
 import machine from '../assets/images/Arcade machine-amico.png';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 function home() {
   return (
@@ -42,7 +43,7 @@ function home() {
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={machine} />
           <Card.Body>
-            <Link to="/">
+            <Link to="/ticTacToe">
               <Card.Title>Tic Tac Toe</Card.Title>
             </Link>
             <Card.Text>
