@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
+// import Navbar from "react-bootstrap/Navbar";
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import arcadeMachine from "../../assets/images/machine.png"
-import machine from '../../assets/images/Arcade machine-amico.png';
+
 
 
 // Alejandra made this nav bar. Feel free to style it. It was just my way of checking if the pages were rendering correctly.
@@ -53,39 +54,53 @@ const Navigation = () => {
 
 export default Navigation;
 
-// I was trying to make the navbar look more like a navbar lol I didn't have a lot of luck --Mads 
+// import React from 'react';
+// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+// import { useLogout } from '../../hooks/useLogout';
+// import { useAuthContext } from '../../hooks/useAuthContext';
+// import arcadeMachine from '../../assets/images/machine.png';
 
-// import "./Navbar.css";
-
-// import { Link } from "react-router-dom";
-// import { useLogout } from "../../hooks/useLogout";
-// import { useAuthContext } from "../../hooks/useAuthContext";
-// import { Navbar, Container, Nav } from 'react-bootstrap';
-
-// function NavBar() {
+// const Navigation = () => {
 //   const { logout } = useLogout();
 //   const { user } = useAuthContext();
 
 //   const handleClick = () => {
 //     logout();
 //   };
-//   return (
-//     <>
-//       <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="py-0.5 mt-0">
-//         <Container>
-//           <Navbar.Brand as={Link} to="/">Playful Pixels</Navbar.Brand>
-//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//           <Navbar.Collapse id="basic-navbar-nav">
-//             <Nav className="me-auto">
-//               <Nav.Link as={Link} to='/'>Home</Nav.Link>
-//               <Nav.Link as={Link} to='/signup'>Signup</Nav.Link>
-//               <Nav.Link as={Link} to='/login'>Login</Nav.Link>
-//             </Nav>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>
-//     </>
-//   );
-// }
 
-// export default NavBar;
+//   return (
+//     <Navbar bg="body-tertiary" expand="sm">
+//       <Navbar.Brand>
+//         <Link to="/" className="navLink">
+//           <img src={arcadeMachine} alt="Home" className="arcadeMachine" />
+//         </Link>
+//       </Navbar.Brand>
+//       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//       <Navbar.Collapse id="basic-navbar-nav">
+//         {user ? (
+//           <Nav className="ml-auto">
+//             <NavDropdown title={`Signed in as: ${user.email}`} id="basic-nav-dropdown">
+//               <NavDropdown.Item as={Link} to="#login">
+//                 Profile
+//               </NavDropdown.Item>
+//               <NavDropdown.Divider />
+//               <NavDropdown.Item onClick={handleClick}>Log out</NavDropdown.Item>
+//             </NavDropdown>
+//           </Nav>
+//         ) : (
+//           <Nav className="ml-auto">
+//             <Link to="/login" className="navLink">
+//               🕹️Login
+//             </Link>
+//             <Link to="/signup" className="navLink">
+//               🎮Signup
+//             </Link>
+//           </Nav>
+//         )}
+//       </Navbar.Collapse>
+//     </Navbar>
+//   );
+// };
+
+// export default Navigation;

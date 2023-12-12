@@ -25,14 +25,16 @@ const CandyCrush = () => {
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
   const [scoreDisplay, setScoreDisplay] = useState(0);
    const [gameOver, setGameOver] = useState(false);
-
+   const [showScore, setShowScore] = useState(false);
+const [currentTime, setCurrentTime] = useState(30);
 
   const startGame = () => {
     setShowButton(false);
     setScoreDisplay(0);
      setGameOver(false);
-  };
+     setShowScore(true);
 
+};
   const checkForColumnOfFour = () => {
     for (let i = 0; i <= 39; i++) {
       const columnOfFour = [i, i + width, i + width * 2, i + width * 3];
@@ -207,17 +209,28 @@ const CandyCrush = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      checkForColumnOfFour();
-      checkForRowOfFour();
-      checkForColumnOfThree();
-      checkForRowOfThree();
-      moveIntoSquareBelow();
-      setCurrentColorArrangement([...currentColorArrangement]);
-        if (scoreDisplay >= 10) {
-        setGameOver(true);
-        clearInterval(timer); 
-      }
-  }, 100);
+    // checkForColumnOfFour();
+    // checkForRowOfFour();
+    // checkForColumnOfThree();
+    // checkForRowOfThree();
+    // moveIntoSquareBelow();
+    // setCurrentColorArrangement([...currentColorArrangement]);
+      setCurrentTime((prevTime) => prevTime - 1);
+  }, 1000); 
+  if (currentTime === 0) {
+      setGameOver(true);
+      clearInterval(timer);
+    }
+    else {
+    checkForColumnOfFour();
+    checkForRowOfFour();
+    checkForColumnOfThree();
+    checkForRowOfThree();
+    moveIntoSquareBelow();
+    setCurrentColorArrangement([...currentColorArrangement]);
+  }
+
+
     return () => clearInterval(timer);
   }, [
     checkForColumnOfFour,
@@ -227,25 +240,34 @@ const CandyCrush = () => {
     moveIntoSquareBelow,
     currentColorArrangement,
      scoreDisplay,
+     currentTime
   ]);
+
+  
 
   return (
     <div>
       <div className="welcome">
-           {gameOver ? "Game Over!" : "🍬Candy Crush🍬"}
-        </div>
-      {showButton && (
+         {gameOver ? (
+          <div>
+            <div>Game Over</div>
+            {showScore && <div className="score-display">Final Score: {scoreDisplay}</div>}
+          </div>
+        ) : (
+          <div>
+            <div>🍬Candy Crush🍬</div>
+            {showScore && <div className="score-display">Score: {scoreDisplay}</div>}
+            <div className="timer-display">Time Left: {currentTime}s</div>
+          </div>
+        )}
+      </div>
+      {!showScore && (
         <button className="candy-button" onClick={startGame}>
           Start Game
         </button>
       )}
-      {!showButton && (
+      {!gameOver && showScore && (
         <div className="app">
-          {gameOver ? (
-    <div className="game-over">Final Score: {scoreDisplay}</div>
-  ) : (
-    <div className="score-display">Score: {scoreDisplay}</div>
-  )}
           <div className="candyGame">
             {currentColorArrangement.map((candyColor, index) => (
               <img

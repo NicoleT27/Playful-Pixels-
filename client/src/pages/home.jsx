@@ -5,13 +5,14 @@ import './home.css'
 import candyCrush from '../assets/images/candy-crush.png';
 import machine from "../assets/images/Arcade machine-amico.png";
 import memGame from '../assets/images/memGrid.png';
+import ticTac from '../assets/images/ticTacToe.png';
 import { useAuthContext } from '../hooks/useAuthContext';
 
 function home() {
   return (
     <div className="flex-container">
       <div>
-        <Card style={{ width: "18rem" }}>
+        <Card className='card1' style={{ width: "18rem" }}>
           <Card.Img variant="top" src={candyCrush} />
           <Card.Body>
             <Card.Title className="gameTitle">🍭Candy Crush</Card.Title>
@@ -27,7 +28,7 @@ function home() {
 
       {/* second card  */}
       <div>
-        <Card style={{ width: "18rem" }}>
+        <Card className='card2' style={{ width: "18rem" }}>
           <Card.Img variant="top" src={memGame} />
           <Card.Body>
             <Card.Title className="gameTitle">🧠Memory Game</Card.Title>
@@ -43,8 +44,8 @@ function home() {
 
       {/* third card  */}
       <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={machine} />
+        <Card className='card3' style={{ width: "18rem" }}>
+          <Card.Img variant="top" className="gameCard" src={ticTac} />
           <Card.Body>
             <Card.Title className="gameTitle">❌⭕Tic Tac Toe</Card.Title>
             <Card.Text></Card.Text>

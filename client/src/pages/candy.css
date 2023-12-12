@@ -1,3 +1,7 @@
+.score-display, .timer-display{
+color:white;
+font-size:30px;
+}
 
 .app{
     display: flex;
