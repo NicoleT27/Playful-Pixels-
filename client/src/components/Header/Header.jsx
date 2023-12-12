@@ -29,8 +29,8 @@ function header() {
         <Row className="row">
           <Col className="col">
             <h1 class="neon" data-text="U">
-              Welcome<span class="flicker-slow">to</span>Playful
-              <span class="flicker-fast">Pixels</span>
+              <span class="flicker-slow">Playful</span><span class="flicker-slow"></span>Pixels
+              <span class="flicker-fast">Arcade</span>
             </h1>
           </Col>
         </Row>

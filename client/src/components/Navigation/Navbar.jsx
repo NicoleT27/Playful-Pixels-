@@ -25,19 +25,17 @@ const Navigation = () => {
           {/* if user is logged in... */}
           {user && (
             <div className="log-out">
-                <Navbar.Text>
+                <Navbar.Text className="navLink">
                   Signed in as:{" "}
-                  <Link to="#login" className="navLink">
-                  {/* <a href="#login"> */}
+                  <Link to="#login" >
                     <div>{user.email}</div>
-                  {/* </a> */}
                   </Link>
                 </Navbar.Text>
                 <div className='icon'>
               <Link to="/" className='navLink'>Home</Link>
               <img src={arcadeMachine} alt="Home" className='aracdeMachine' />
               </div>
-              <button onClick={handleClick}>Log out</button>
+              <button onClick={handleClick} className='logOutBtn'>Log out</button>
             </div>
           )}
         </Navbar>

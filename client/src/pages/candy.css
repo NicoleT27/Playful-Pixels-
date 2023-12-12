@@ -3,13 +3,14 @@
     display: flex;
     padding: 30px;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .candyGame{
     width: 560px;
     height: 560px;
     display: flex;
     flex-wrap: wrap;
-    border: 10px solid white;
+    border: 10px solid #7FA7FE;;
     border-radius: 2%;
 }
 
@@ -21,20 +22,20 @@
 .welcome {
     font-size: 70px;
     text-align: center;
-    /* -webkit-text-stroke-width: 1px; 
-    -webkit-text-stroke-color: black; */
+    color:#80E4FF;
+    
 }
 body::-webkit-scrollbar {
   width: 12px; 
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #FF731E; 
+  background-color: #55509A; 
   border-radius: 6px; 
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #F62163;
+  background-color: #7FA7FE;
 }
 .candy-button{
  background-color: aliceblue;
@@ -44,8 +45,9 @@ body::-webkit-scrollbar-track {
   height: 50px;
   margin-left: 35em;
   margin-top: 30px;
+  margin-bottom: 130px;
 }
 .candy-button:hover{
-    background-color: #F62163;
+    background-color: #7FA7FE;
   color: aliceblue;
 }

@@ -60,7 +60,7 @@ color: white;
    margin-bottom: 80px;
 }
 .gameBtn:hover{
-  background-color: rgb(241, 146, 146);
+  background-color:#7FA7FE;
   transition: background-color 0.5s ease;
 }
 

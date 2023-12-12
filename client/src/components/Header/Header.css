@@ -20,9 +20,9 @@
   /* transform: translate(-50%, -50%); */
   font-weight: 600;
   /* letter-spacing: 8px; */
-  text-shadow: 1px 0px 4px #9E3A3C, 2px 0px 4px #FCAF81, 3px 0px 4px #FCAF81,
-    2px 0px 3px #9E3A3C, 2px 3px 15px #FCAF81, 2px 0px 15px, 5px 0px 125px,
-    20px 0vw 200px #9E3A3C, 40px 0vw 200px #FCAF81;
+  text-shadow: 1px 0px 4px #FE7AB8, 2px 0px 4px #76429E, 3px 0px 4px #7FA7FE,
+    2px 0px 3px #55509A, 2px 3px 15px #FE7AB8, 2px 0px 15px, 5px 0px 125px,
+    20px 0vw 200px #55509A, 40px 0vw 200px #7FA7FE;
 }
 
 .flicker-slow {
@@ -56,17 +56,6 @@
   }
 }
 
-/* .PP {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    padding: 5px;
-    font-size: 105px;
-    -webkit-text-stroke-width: 1px; 
-    -webkit-text-stroke-color: black;
-    margin-bottom: 50px;
-    
-} */
 
 /* responsive behavior for very small screens  */
 @media (max-width: 320px) {

@@ -8,11 +8,11 @@ body {
   display: flex;
   justify-content: center; */
   color: white;
-  font-family:"Press Start 2P";
+  font-family: "Press Start 2P";
   margin: 0;
-  padding: 0; 
-background: rgb(117,38,180);
-background: radial-gradient(circle, rgba(117,38,180,0.8381477591036415) 9%, rgba(0,0,0,1) 72%);
+  padding: 0;
+  background: rgb(117, 38, 180);
+  background: radial-gradient(circle, rgba(117, 38, 180, 0.8381477591036415) 9%, rgba(0, 0, 0, 1) 72%);
 
 }
 
@@ -43,4 +43,4 @@ background: radial-gradient(circle, rgba(117,38,180,0.8381477591036415) 9%, rgba
     background-size: cover;
     overflow-x: hidden;
   }
-} 
+}

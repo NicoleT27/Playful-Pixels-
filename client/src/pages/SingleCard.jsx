@@ -1,5 +1,5 @@
 import React from 'react';
-import orange from '../assets/images/orange.png'
+import marble from '../assets/images/marble.png';
 
 const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
     const handleClick = () => {
@@ -15,7 +15,7 @@ const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
                     <img className='front' src={card.src} />
                     <img
                         className='back'
-                        src={orange}
+                        src={marble}
                         onClick={handleClick} />
                 </div>
             </div>
