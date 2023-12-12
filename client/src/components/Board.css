@@ -34,5 +34,11 @@
 }
 
 
-
+.status {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 

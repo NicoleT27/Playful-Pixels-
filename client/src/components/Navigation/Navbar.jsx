@@ -20,21 +20,19 @@ const Navigation = () => {
   };
 
   return (
-    <container className="navBar">
-      <div className="container">
+    <div className="navBar">
         <Navbar className="bg-body-tertiary">
           {/* if user is logged in... */}
           {user && (
             <div className="log-out">
-              <Container>
                 <Navbar.Text>
                   Signed in as:{" "}
-                  <a href="#login">
+                  <Link to="#login">
+                  {/* <a href="#login"> */}
                     <div>{user.email}</div>
-                  </a>
+                  {/* </a> */}
+                  </Link>
                 </Navbar.Text>
-              </Container>
-
               <Link to="/">Home</Link>
               <button onClick={handleClick}>Log out</button>
             </div>
@@ -47,8 +45,8 @@ const Navigation = () => {
             <Link to="/signup">🎮Signup</Link>
           </div>
         )}
-      </div>
-    </container>
+    </div>
+    
   );
 };
 

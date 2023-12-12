@@ -32,13 +32,15 @@ function Board() {
     let status;
 
     if (winner) {
-        status = `Winner: ${winner}`;
+        status = `${winner} has won the game!`;
     } else {
-        status = `It is ${isX ? 'X' : 'O'}'s turn`;
+        status = `It's ${isX ? 'X' : 'O'}'s turn`;
     }
 
     return (
+        
         <div className="board">
+            <div className="status">{status}</div>
             <div className="ticTacToeRow">
                 <div className="boxDecoration right"><Square value={squares[0]} onClick = {() => handleClick(0)} /></div>
                 <div className="boxDecoration right"><Square value={squares[1]} onClick = {() => handleClick(1)}/></div>
@@ -54,7 +56,7 @@ function Board() {
                 <div className="boxDecoration right top"><Square value={squares[7]} onClick = {() => handleClick(7)}/></div>
                 <div className="boxDecoration top"><Square value={squares[8]} onClick = {() => handleClick(8)}/></div>
             </div>
-            <div className="status">{status}</div>
+            
             <button className="restart" onClick={handleRestart}>Restart Game</button>
         </div>
     )
