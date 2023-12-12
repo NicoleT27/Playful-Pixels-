@@ -5,21 +5,27 @@
   padding: 0;
   
 } */
+.icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.aracdeMachine{
+  width: 50px; 
+  /* height: auto; */
+}
 
 .navBar {
-  /* background-color: #2b4958; */
-/* background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(43,73,88,0.9417892156862745) 92%); */
-background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(43,73,88,0.8381477591036415) 92%); 
+background: #672C7F;
 display: flex;
 justify-content: flex-end;
 position: fixed;
-top: 0;
+bottom: 0;
 left: 0;
 width: 100%;
 padding: 2px;
 margin-top: 20px;
+align-items: center;
 }
 
 .log-out, .navlink {

@@ -6,7 +6,7 @@ import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-
+import arcadeMachine from "../../assets/images/machine.png"
 import machine from '../../assets/images/Arcade machine-amico.png';
 
 
@@ -33,7 +33,10 @@ const Navigation = () => {
                   {/* </a> */}
                   </Link>
                 </Navbar.Text>
+                <div className='icon'>
               <Link to="/" className='navLink'>Home</Link>
+              <img src={arcadeMachine} alt="Home" className='aracdeMachine' />
+              </div>
               <button onClick={handleClick}>Log out</button>
             </div>
           )}

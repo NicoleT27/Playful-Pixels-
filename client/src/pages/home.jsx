@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import './home.css'
 import candyCrush from '../assets/images/candy-crush.png';
 import machine from "../assets/images/Arcade machine-amico.png";
+import memGame from '../assets/images/mem-game.png';
 import { useAuthContext } from '../hooks/useAuthContext';
 
 function home() {
