@@ -17,7 +17,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../Navigation/Navbar";
-import "./header.css";
+import "./Header.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
