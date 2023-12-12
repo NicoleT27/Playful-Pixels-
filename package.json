@@ -12,11 +12,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run watch\"",
-    "production":"concurrently \"cd server && npm run watch\" \"cd client && npm run watch\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "production": "concurrently \"cd server && npm run watch\" \"cd client && npm run watch\"",
+    "heroku-postbuild": "cd server && npm install && cd client && npm install "
   },
   "dependencies": {
-     "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0"
   },
   "repository": {
     "type": "git",
