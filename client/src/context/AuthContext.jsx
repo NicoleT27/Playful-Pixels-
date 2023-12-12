@@ -30,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
 
 
     //this will help us keep track of whether we are logged in or logged out
-    console.log('AuthContext state: ', state);
+    ('AuthContext state: ', state);
 
     return (
         <AuthContext.Provider value={{ ...state, dispatch }}>

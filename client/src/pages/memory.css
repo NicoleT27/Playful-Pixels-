@@ -8,6 +8,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-bottom: 40px;
+  padding: 70px;
 }
 
 h1{
@@ -28,7 +30,6 @@ h1{
   color: aliceblue;
 }
 .grid {
-  
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -27,6 +27,7 @@ const CandyCrush = () => {
 
   const startGame = () => {
     setShowButton(false);
+    setScoreDisplay(0);
   };
 
   const checkForColumnOfFour = () => {
@@ -41,7 +42,7 @@ const CandyCrush = () => {
             currentColorArrangement[square] === decidedColor && !isBlank
         )
       ) {
-        setScoreDisplay((score) => score + 4);
+        setScoreDisplay((score) => score + 1);
         columnOfFour.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -68,7 +69,7 @@ const CandyCrush = () => {
             currentColorArrangement[square] === decidedColor && !isBlank
         )
       ) {
-        setScoreDisplay((score) => score + 4);
+        setScoreDisplay((score) => score + 1);
         rowOfFour.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -89,7 +90,7 @@ const CandyCrush = () => {
             currentColorArrangement[square] === decidedColor && !isBlank
         )
       ) {
-        setScoreDisplay((score) => score + 3);
+        setScoreDisplay((score) => score + 1);
         columnOfThree.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -115,7 +116,7 @@ const CandyCrush = () => {
             currentColorArrangement[square] === decidedColor && !isBlank
         )
       ) {
-        setScoreDisplay((score) => score + 3);
+        setScoreDisplay((score) => score + 1);
         rowOfThree.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -190,15 +191,6 @@ const CandyCrush = () => {
     }
   };
 
-  // const createBoard = () => {
-  //   const randomColorArrangement = [];
-  //   for (let i = 0; i < width * width; i++) {
-  //     const randomColor =
-  //       candyColors[Math.floor(Math.random() * candyColors.length)];
-  //     randomColorArrangement.push(randomColor);
-  //   }
-  //   setCurrentColorArrangement(randomColorArrangement);
-  // };
 
   useEffect(() => {
     const randomColorArrangement = [];

@@ -3,7 +3,6 @@
 
 body {
   /* background-image: url('../src/assets/images/arcade2.png');
-  background-size:cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center; */
@@ -13,7 +12,7 @@ body {
   padding: 0;
   background: rgb(117, 38, 180);
   background: radial-gradient(circle, rgba(117, 38, 180, 0.8381477591036415) 9%, rgba(0, 0, 0, 1) 72%);
-
+  background-size: 100% 100%;
 }
 
 /* responsive behavior for very small screens  */

@@ -28,7 +28,7 @@ const Navigation = () => {
                 <Navbar.Text className="navLink">
                   Signed in as:{" "}
                   <Link to="#login" >
-                    <div>{user.email}</div>
+                    <div>{user.username}</div>
                   </Link>
                 </Navbar.Text>
                 <div className='icon'>
