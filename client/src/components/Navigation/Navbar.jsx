@@ -43,10 +43,8 @@ const Navigation = () => {
         {/* if user is logged out... */}
         {!user && (
           <div className="links">
-            {/* <Link to="/">Home</Link> */}
             <Link to="/login">🕹️Login</Link>
             <Link to="/signup">🎮Signup</Link>
-            {/* <Link to="/">{machine.png}</Link> */}
           </div>
         )}
       </div>
