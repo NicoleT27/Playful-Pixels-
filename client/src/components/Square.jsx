@@ -2,8 +2,8 @@
 // import { faTimes } from '@fortawesome/free-solid-svg-icons';
 // import { faCircle } from '@fortawesome/free-regular-svg-icons';
 import "../components/Square.css"
-import xImg from '../assets/images/x-removebg-preview.png'
-import oImg from '../assets/images/circle-removebg-preview.png' ///client/src/assets/images/
+import xImg from '../assets/images/tictactoex-removebg-preview_360.png' // /client/src/assets/images/tictactoex-removebg-preview_360.png
+import oImg from '../assets/images/tictactoeo-removebg-preview_360.png' // client/src/assets/images/tictactoeo-removebg-preview_360.png
 
 function Square({ value, onClick }) {
     let icon;

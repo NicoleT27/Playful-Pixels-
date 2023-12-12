@@ -13,6 +13,8 @@
     flex-direction: column;
 
     justify-content: center;
+
+    padding-bottom: 100px;
 }
 
 .ticTacToeRow {
@@ -43,6 +45,6 @@
 }
 
 .xAndO {
-    height: 149px;
-    width: 149px;
+    height: 150px;
+    width: auto;
 }
