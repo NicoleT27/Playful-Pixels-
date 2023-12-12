@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import ScoreBoard from "../components/ScoreBoard.js";
 import redCandy from '../assets/images/red-candy.png'
 import pinkCandy from "../assets/images/pink-candy.png"
 import orangeCandy from "../assets/images/orange-candy.png"
@@ -240,6 +239,7 @@ const CandyCrush = () => {
       )}
       {!showButton && (
         <div className="app">
+            <div className="score-display">Score: {scoreDisplay}</div>
           <div className="candyGame">
             {currentColorArrangement.map((candyColor, index) => (
               <img
@@ -257,7 +257,6 @@ const CandyCrush = () => {
               />
             ))}
           </div>
-          {/* <ScoreBoard score={scoreDisplay} /> */}
         </div>
       )}
     </div>

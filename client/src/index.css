@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: rgb(241, 146, 146);
+  color: #7FA7FE;
   transition: color 0.5s ease;
 }
 

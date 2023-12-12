@@ -14,6 +14,7 @@ h1{
   font-size: 70px;
   display: flex;
   justify-content: center;
+  color:#80E4FF;
 }
 .mem-button {
   background-color: aliceblue;
@@ -23,10 +24,11 @@ h1{
   height: 50px;
 }
 .mem-button:hover{
-  background-color: #BB68C9;
+  background-color: #7FA7FE;
   color: aliceblue;
 }
 .grid {
+  
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

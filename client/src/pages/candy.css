@@ -10,7 +10,7 @@
     height: 560px;
     display: flex;
     flex-wrap: wrap;
-    border: 10px solid #7FA7FE;;
+    border: 10px solid #7FA7FE;
     border-radius: 2%;
 }
 
@@ -50,4 +50,7 @@ body::-webkit-scrollbar-track {
 .candy-button:hover{
     background-color: #7FA7FE;
   color: aliceblue;
+}
+.score-display{
+  margin-right: 20px;
 }
