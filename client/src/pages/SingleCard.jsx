@@ -1,5 +1,5 @@
-import React from 'react'
-import blank from '../assets/images/white.png'
+import React from 'react';
+import orange from '../assets/images/orange.png'
 
 const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
     const handleClick = () => {
@@ -15,7 +15,7 @@ const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
                     <img className='front' src={card.src} />
                     <img
                         className='back'
-                        src={blank}
+                        src={orange}
                         onClick={handleClick} />
                 </div>
             </div>

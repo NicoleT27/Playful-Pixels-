@@ -5,13 +5,14 @@
 .col {
   padding-bottom: 0;
 }
+
 .neon {
   /* font-family: "Monoton", cursive; */
   font-size: 80px;
   /* color: #299EAE; */
   color: #9DDAE7;
-  gap:0.5em;
-  
+  gap: 0.5em;
+
   /* position:absolute; */
   /* top: 50%;
   left: 50%; */
@@ -32,6 +33,7 @@
 }
 
 @keyframes flicker {
+
   0%,
   19.999%,
   22%,
@@ -42,6 +44,7 @@
   100% {
     opacity: 0.99;
   }
+
   20%,
   21.999%,
   63%,
@@ -51,6 +54,7 @@
     opacity: 0.4;
   }
 }
+
 /* .PP {
     display: inline-block;
     vertical-align: middle;
