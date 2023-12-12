@@ -34,7 +34,7 @@ const Navigation = () => {
                   </Link>
                 </Navbar.Text>
               <Link to="/" className='navLink'>Home</Link>
-              <button onClick={handleClick} className="log-out">Log out</button>
+              <button onClick={handleClick}>Log out</button>
             </div>
           )}
         </Navbar>

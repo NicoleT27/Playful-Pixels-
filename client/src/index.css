@@ -57,6 +57,7 @@ color: white;
   color: black;
    border-color: black;
    margin-left: 2em;
+   margin-bottom: 80px;
 }
 .gameBtn:hover{
   background-color: rgb(241, 146, 146);
