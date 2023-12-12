@@ -22,11 +22,14 @@ padding: 2px;
 margin-top: 20px;
 }
 
-.log-out  {
+.log-out, .navlink {
   display: flex;
-  gap: 10px;
+  gap: 455px;
 }
 
+.log-out{
+  margin-right: 15px;
+}
 
 .links {
   display: flex;

@@ -6,9 +6,9 @@ function Square({ value, onClick }) {
     let icon;
 
     if (value === 'X') {
-        icon = <img src="../assets/images/x-removebg-preview.png" />;
+        icon = <img src="/x-removebg-preview.png" />;
     } else if (value === 'O') {
-        icon = <img src = "../assets/images/circle-removebg-preview.png" />;
+        icon = <img src = "/circle-removebg-preview.png" />;
     } else {
         icon = value;
     }

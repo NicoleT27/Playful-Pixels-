@@ -27,14 +27,14 @@ const Navigation = () => {
             <div className="log-out">
                 <Navbar.Text>
                   Signed in as:{" "}
-                  <Link to="#login">
+                  <Link to="#login" className="navLink">
                   {/* <a href="#login"> */}
                     <div>{user.email}</div>
                   {/* </a> */}
                   </Link>
                 </Navbar.Text>
-              <Link to="/">Home</Link>
-              <button onClick={handleClick}>Log out</button>
+              <Link to="/" className='navLink'>Home</Link>
+              <button onClick={handleClick} className="log-out">Log out</button>
             </div>
           )}
         </Navbar>
