@@ -5,13 +5,13 @@
 function Square({ value, onClick }) {
     let icon;
 
-    // if (value === 'X') {
-    //     icon = <FontAwesomeIcon icon={faTimes} size="2xl"style={{ color: "#ffc17a" }} />;
-    // } else if (value === 'O') {
-    //     icon = <FontAwesomeIcon icon={faCircle} size="2xl" style={{ color: "#bc70d2" }} />;
-    // } else {
+    if (value === 'X') {
+        icon = <img src="../assets/images/x-removebg-preview.png" />;
+    } else if (value === 'O') {
+        icon = <img src = "../assets/images/circle-removebg-preview.png" />;
+    } else {
         icon = value;
-    // }
+    }
 
     return (
         <button className="square" onClick={onClick}>

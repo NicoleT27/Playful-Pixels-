@@ -14,17 +14,19 @@ background: rgb(0,0,0);
 background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(43,73,88,0.8381477591036415) 92%); 
 display: flex;
 justify-content: flex-end;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 2px;
+margin-top: 20px;
 }
 
 .log-out  {
   display: flex;
   gap: 10px;
 }
-/* nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-} */
+
 
 .links {
   display: flex;
