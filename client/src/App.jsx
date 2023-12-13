@@ -29,14 +29,12 @@ function App() {
 
   return (
     <div>
-      
+
       <BrowserRouter>
         <Header />
         {/* <Navbar /> */}
         <div className='pages'>
           <Routes>
-            {/* if user, navigate to home; if no user, navigate to login page */}
-            <Route path="/" element={user ? <Home /> : <Navigate to='/login' />} />
 
             {/* if no user, navigate to login; if user, navigate to home */}
             <Route path="/login" element={!user ? <Login /> : <Navigate to='/' />} />
@@ -51,7 +49,10 @@ function App() {
             <Route path="/memory" element={user ? <MemoryGame /> : <Navigate to='/login' />} />
 
             {/* if user, navigate to tic tac toe game, if no user; navigate to login page */}
-            <Route path="/ticTacToe" element={<TicTacToe />} />
+            <Route path="/ticTacToe" element={user ? <TicTacToe /> : <Navigate to='/login' />} />
+
+            {/* if user, navigate to home; if no user, navigate to login page */}
+            <Route path="/" element={user ? <Home /> : <Navigate to='/login' />} />
 
           </Routes>
         </div>

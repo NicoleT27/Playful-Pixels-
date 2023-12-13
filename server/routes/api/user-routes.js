@@ -8,7 +8,7 @@ const requireAuth = require('../../middleware/requireAuth');
 // const require('dotenv').config();
 
 const createToken = (userId) => {
-    return jwt.sign({_id: userId}, process.env.SESSIONSECRET, { expiresIn: '5d'});
+    return jwt.sign({_id: userId}, process.env.SESSIONSECRET, { expiresIn: '60m'});
 }
 
 const router = express.Router();
