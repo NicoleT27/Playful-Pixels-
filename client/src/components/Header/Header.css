@@ -4,6 +4,7 @@
 
 .col {
   padding-bottom: 0;
+  padding-left: 100px;
 }
 
 .neon {
@@ -80,7 +81,7 @@
 }
 
 /* responsive behavior for small desktops and larger  */
-@media (min-width: 993px) and (max-width: 1280px) {
+@media (min-width: 993px) {
   .neon {
     font-size: 80px;
   }
