@@ -45,7 +45,7 @@ function home() {
       {/* third card  */}
       <div>
         <Card className='card3' style={{ width: "18rem" }}>
-          <Card.Img variant="top" className="gameCard" src={ticTac} />
+          <Card.Img variant="top" src={ticTac} />
           <Card.Body>
             <Card.Title className="gameTitle">❌⭕Tic Tac Toe</Card.Title>
             <Card.Text></Card.Text>
