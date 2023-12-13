@@ -3,14 +3,14 @@
 }
 
 .col {
-  padding-bottom: 0;
-  padding-left: 100px;
+  padding: 0;
 }
 
 .neon {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
   font-size: 80px;
   /* color: #299EAE; */
   color: #9DDAE7;
