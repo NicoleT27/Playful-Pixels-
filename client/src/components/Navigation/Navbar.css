@@ -1,13 +1,3 @@
-/* body { */
-/* color: white;
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  padding: 0; */
-
-
-/* } */
-
-
 .icon {
   display: flex;
   flex-direction: row;
@@ -16,13 +6,12 @@
 
 .aracdeMachine {
   width: 50px;
-  /* height: auto; */
 }
 
 .navBar {
   background-image: radial-gradient(circle, rgba(117, 38, 180, 0.8381477591036415) 9%, rgba(0, 0, 0, 1) 72%);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -47,7 +36,7 @@
 .log-out,
 .navlink {
   display: flex;
-  gap: 335px;
+  gap: 550px;
   color: #fff;
   text-shadow:
     0 0 7px #f4cbe1,
@@ -60,13 +49,31 @@
     0 0 151px #FE7AB8;
 }
 
-.log-out {
-  margin-right: 15px;
+.currentUser{
+  margin-top: 5px;
+}
+.currentUser:hover{
+  color: #7FA7FE;
 }
 
 .logOutBtn {
-  background-color: #7FA7FE;
-  color: white;
+  /* background-color: #7FA7FE;
+  color: white; */
+  color: #FE7AB8;
+  text-shadow:
+    0 0 7px #f4cbe1,
+    0 0 10px #f4cbe1,
+    0 0 21px #f4cbe1,
+    0 0 42px #FE7AB8,
+    0 0 82px #FE7AB8,
+    0 0 92px #FE7AB8,
+    0 0 102px #FE7AB8,
+    0 0 151px #FE7AB8;
+}
+
+.logOutBtn:hover{
+  color: #fff;
+  background-color: #FE7AB8;
 }
 
 .links {
@@ -90,21 +97,37 @@
 }
 
 @media (max-width: 320px) {
+  .links {
+    flex-shrink: 1;
+    justify-content: center;
+    gap: 10px; /* Adjusted gap for better spacing */
+  }
+
   .links a {
     font-size: 20px;
   }
 }
 
-/* responsive behavior for small screens  */
-@media (min-width: 321px) and (max-width: 575px) {
+@media (max-width: 575px) {
+  .links {
+    flex-shrink: 1;
+    justify-content: center;
+    gap: 10px; /* Adjusted gap for better spacing */
+  }
+
   .links a {
     font-size: 28px;
   }
 }
 
-/* responsive behavior for medium sized screens (tablets)  */
-@media (min-width: 576px) and (max-width: 992px) {
+/* responsive behavior for small screens */
+@media (min-width: 576px) {
+  .links {
+    justify-content: center;
+    gap: 10px; /* Adjusted gap for better spacing */
+  }
+
   .links a {
-    font-size: 35px;
+    font-size: 28px;
   }
 }
