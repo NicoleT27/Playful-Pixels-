@@ -15,11 +15,11 @@ function home() {
       <div>
         <Card className='card1' style={{ width: "18rem" }}>
           <Card.Img variant="top" src={memGame} />
-          <Card.Body>
+          <Card.Body style={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}>
             <Card.Title className="gameTitle">🧠Memory Game</Card.Title>
             <Card.Text></Card.Text>
             <Link to="/memory">
-              <Button variant="primary" className="gameBtn">
+              <Button className="gameBtn">
                 Go To Game
               </Button>
             </Link>
@@ -35,7 +35,7 @@ function home() {
             <Card.Title className="gameTitle">🍭Candy Crush</Card.Title>
             <Card.Text></Card.Text>
             <Link to="/candy">
-              <Button variant="primary" className="gameBtn">
+              <Button className="gameBtn">
                 Go To Game
               </Button>
             </Link>
@@ -50,7 +50,7 @@ function home() {
             <Card.Title className="gameTitle">❌⭕Tic Tac Toe</Card.Title>
             <Card.Text></Card.Text>
             <Link to="/ticTacToe">
-              <Button variant="primary" className="gameBtn">
+              <Button className="gameBtn">
                 Go To Game
               </Button>
             </Link>

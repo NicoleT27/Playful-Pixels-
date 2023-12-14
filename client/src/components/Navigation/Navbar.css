@@ -139,7 +139,7 @@ responsive behavior for small screens
 
 .navBar {
   background-color: radial-gradient(circle, rgba(117, 38, 180, 0.8381477591036415) 9%, rgba(0, 0, 0, 1) 72%) !important;
-  font-family: Press Start 2P !important;
+  font-family: "Press Start 2P";
 }
 
 .navLink {

@@ -1,62 +1,75 @@
-.score-display, .timer-display{
-color:white;
-font-size:30px;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.score-display,
+.timer-display {
+  color: white;
+  font-size: 30px;
 }
 
-.app{
-    display: flex;
-    padding: 30px;
-    justify-content: center;
-    margin-bottom: 40px;
+.app {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+
 }
-.candyGame{
-    width: 560px;
-    height: 560px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 10px solid #7FA7FE;
-    border-radius: 2%;
+
+.candyGame {
+  width: 560px;
+  height: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid #7FA7FE;
+  border-radius: 2%;
 }
 
 .candyGame img {
-    width: 70px;
-    height:70px;
+  width: 70px;
+  height: 70px;
 }
 
 .welcome {
-    font-size: 70px;
-    text-align: center;
-    color:#80E4FF;
-    
+  font-family: "Press Start 2P";
+  font-size: 70px;
+  text-align: center;
+  color: #80E4FF;
+
 }
+
 body::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #55509A; 
-  border-radius: 6px; 
+  background-color: #55509A;
+  border-radius: 6px;
 }
 
 body::-webkit-scrollbar-track {
   background-color: #7FA7FE;
 }
-.candy-button{
- background-color: #fff;
+
+.candy-button {
+  background-color: #fff;
   color: black;
-  /* border-radius: 8px; I commented this out bc it's an inherited trait from button class in App.css -Mads  */
-  width: 150px;
+  border-radius: 8px;
+  font-family: "Press Start 2P";
+  /* width: 150px; */
   height: 50px;
-  margin: 30px auto 130px; /*I combined the 3 separate margins you already had */
-  display: block; /*this centered the btn to the page*/
+  margin: 30px auto 130px;
+  /*I combined the 3 separate margins you already had */
+  display: block;
+  /*this centered the btn to the page*/
   /* margin-left: 35em; */
   /* margin-top: 30px; */
   /* margin-bottom: 130px; */
 }
-.candy-button:hover{
-    background-color: #7FA7FE;
+
+.candy-button:hover {
+  background-color: #7FA7FE;
   color: aliceblue;
 }
-.score-display{
+
+.score-display {
   margin-right: 20px;
 }
