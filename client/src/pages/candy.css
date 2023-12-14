@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .score-display,
-.timer-display {
+.timer-display,.instructions {
   color: white;
   font-size: 30px;
+}
+
+.instructions {
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .app {
@@ -19,7 +27,6 @@
   height: 560px;
   display: flex;
   flex-wrap: wrap;
-  /* border: 5px solid #7FA7FE; */
   border-radius: 2%;
 }
 
@@ -73,3 +80,21 @@ body::-webkit-scrollbar-track {
 .score-display {
   margin-right: 20px;
 }
+.score-display-final{
+margin-right: 20px;
+margin-bottom: 150px;
+  color: white;
+  font-size: 30px;
+}
+
+.restart-candy{
+  font-size: 20px;
+  border-radius: 8px;
+   height: 50px;
+  margin: 30px auto 130px;
+}
+.restart-candy:hover{
+background-color: #7FA7FE;
+  color: aliceblue;
+}
+  

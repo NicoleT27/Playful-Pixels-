@@ -27,12 +27,15 @@ const CandyCrush = () => {
    const [gameOver, setGameOver] = useState(false);
    const [showScore, setShowScore] = useState(false);
 const [currentTime, setCurrentTime] = useState(30);
+const [gameStarted, setGameStarted] = useState(false);
 
   const startGame = () => {
     setShowButton(false);
     setScoreDisplay(0);
      setGameOver(false);
      setShowScore(true);
+     setGameStarted(true); 
+     setCurrentTime(30);
 
 };
   const checkForColumnOfFour = () => {
@@ -177,16 +180,19 @@ const checkForRowOfFour = () => {
         return () => clearInterval(timer)
     }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
 
-useEffect(() => {
+    useEffect(() => { 
+  if (!showButton) {
     const timer = setInterval(() => {
       setCurrentTime((prevTime) => prevTime - 1);
       if (currentTime === 0) {
-         setGameOver(true);
+        setGameOver(true);
       }
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [currentTime]);
+  }
+}, [showButton, currentTime]);
+
 
   return (
     <div>
@@ -194,18 +200,22 @@ useEffect(() => {
          {gameOver ? (
           <div>
             <div>Game Over</div>
-            {showScore && <div className="score-display">Final Score: {scoreDisplay}</div>}
+            {showScore && <div className="score-display-final">Final Score: {scoreDisplay}</div>}
+             <button className="restart-candy" onClick={startGame}>
+          Restart Game
+        </button>
           </div>
         ) : (
           <div>
             <div>🍬Candy Crush🍬</div>
             {showScore && <div className="score-display">Score: {scoreDisplay}</div>}
-            <div className="timer-display">Time Left: {currentTime}s</div>
+              {gameStarted && <div className="timer-display">Time Left: {currentTime}s</div>}
+             {showButton && <div className="instructions">"Click 'Start Game' to begin a 30-second challenge. Match three candies in a row or column for 3 points, and four for 4 points. Game over when the timer ends. Ready to play?"</div>}
           </div>
         )}
       </div>
-      {!showScore && (
-        <button className="candy-button" onClick={startGame}>
+     {!showScore && (
+    <button className="candy-button" onClick={startGame}>
           Start Game
         </button>
       )}

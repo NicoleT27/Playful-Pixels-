@@ -32,7 +32,6 @@ function App() {
 
       <BrowserRouter>
         <Header />
-        {/* <Navbar /> */}
         <div className='pages'>
           <Routes>
 
@@ -56,6 +55,7 @@ function App() {
 
           </Routes>
         </div>
+        <Navbar />
       </BrowserRouter>
     </div>
   )

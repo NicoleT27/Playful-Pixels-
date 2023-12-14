@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
         const validPassword = await userData.checkPassword(req.body.password);
         
         if (!validPassword) {
-            throw Error ('Password does not match email');
+            throw Error ('Email/password combination is not valid. Please try again or sign up.');
         } 
 
         //if no errors are caught, we create a token

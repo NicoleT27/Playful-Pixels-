@@ -137,13 +137,20 @@ responsive behavior for small screens
   width: 50px;
 }
 
+.icon {
+  gap: 30px;
+  align-items: center;
+}
+
 .navBar {
   background-color: radial-gradient(circle, rgba(117, 38, 180, 0.8381477591036415) 9%, rgba(0, 0, 0, 1) 72%) !important;
   font-family: "Press Start 2P";
 }
 
-.navLink {
-  color: #fff;
+.navLink,
+.currentUser {
+  text-decoration: none !important;
+  color: #fff !important;
   text-shadow:
     0 0 7px #f4cbe1,
     0 0 10px #f4cbe1,
@@ -155,7 +162,14 @@ responsive behavior for small screens
     0 0 151px #FE7AB8;
 }
 
+.log-out {
+  gap: 30px !important;
+}
+
 .logOutBtn {
+  cursor: pointer;
+  display: flex;
+  height: 50px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -175,4 +189,20 @@ responsive behavior for small screens
 .logOutBtn:hover {
   color: #fff;
   background-color: #FE7AB8;
+}
+
+.currentUser {
+  text-decoration: none !important;
+  margin-top: 5px;
+}
+
+.currentUser:hover {
+  color: #7FA7FE;
+}
+
+@media (max-width: 576px) {
+  .logOutBtn {
+    font-size: 0.8em; /* Adjust the font size for smaller screens */
+    padding: 0.5em 1em; /* Adjust padding for smaller screens */
+  }
 }

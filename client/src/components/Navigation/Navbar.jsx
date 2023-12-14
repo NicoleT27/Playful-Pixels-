@@ -22,15 +22,15 @@ const Navigation = () => {
   };
 
   return (
-    <div className="navBar justify-content-center">
-        <Navbar expand="lg">
+    <div className="navBar d-flex justify-content-center"  fixed="bottom">
+        <Navbar expand="lg" >
           {/* if user is logged in... */}
           {user && (
-            <div className="log-out">
-                <Navbar.Text className="navLink me-auto">
+            <div className="log-out d-flex justify-content-between">
+                <Navbar.Text className="navLink ms-auto">
                   Signed in as:{" "}
                   <Link to="#login" >
-                    <div className='currentUser'>{user.username}</div>
+                    <div className='currentUser d-flex-column'>{user.username}</div>
                   </Link>
                 </Navbar.Text>
                 <div className='icon'>
