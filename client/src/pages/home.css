@@ -20,6 +20,9 @@
 }
 
 .gameBtn {
+    text-decoration: none !important;
+    display: flex;
+    justify-content: center;
     border-radius: 8px !important;
     border: 1px solid transparent !important;
     padding: 0.6em 1.2em !important;
@@ -27,9 +30,9 @@
     font-family: inherit;
     cursor: pointer !important;
     transition: border-color 0.25s !important;
-    background-color: white !important; 
+    background-color: white !important;
     border-color: black !important;
-    margin: 10px auto 80px !important;
+    margin: 10px auto 20px !important;
     align-items: center !important;
     color: #7FA7FE;
     text-shadow:
@@ -41,6 +44,10 @@
         0 0 92px #FE7AB8,
         0 0 102px #FE7AB8,
         0 0 151px #FE7AB8;
+}
+
+.gameBtn a {
+    text-decoration: none;
 }
 
 .gameBtn:hover {
@@ -74,6 +81,6 @@
 
     .gameBtn {
         margin: 10px auto 20px;
-        /* Adjust margins for centering */
+        
     }
 }
