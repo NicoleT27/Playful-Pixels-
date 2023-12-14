@@ -1,10 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext';
 
-//Is this being used for anything? Alejandra Commented it out to check on other functionality
-//Feel free to put it back
-// import { useState } from 'react'
-
 import './App.css'
 import './pages/candy.css'
 import Home from './pages/home';
@@ -21,11 +17,6 @@ function App() {
 
   const { user } = useAuthContext();
 
-
-  //Is this being used for anything? Alejandra Commented it out to check on other functionality
-  //Feel free to put it back
-
-  // const [count, setCount] = useState(0)
 
   return (
     <div>

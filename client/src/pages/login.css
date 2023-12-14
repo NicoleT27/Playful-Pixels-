@@ -28,13 +28,11 @@
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  /* border: 2px solid rgb(241, 146, 146); */
   border: 2px solid #FE71B3;
   border-radius: 4px;
 }
 
 .submitBtn {
-  /* background-color: #4caf50; */
   color: #FE71B3;
   padding: 10px 15px;
   font-size: 16px;

@@ -15,7 +15,7 @@ function home() {
       <div>
         <Card className='card1' style={{ width: "18rem", border:"2px solid #80E4FF" }}>
           <Card.Img variant="top" src={memGame} />
-          <Card.Body style={{ padding: "0em",backgroundColor: 'rgba(255, 255, 255, 0)' }}>
+          <Card.Body style={{ padding: "0em" }}>
             <Card.Title className="gameTitle">Memory Game</Card.Title>
             <Card.Text className='cardText'>🧠 🧠 🧠</Card.Text>
             <Link to="/memory">

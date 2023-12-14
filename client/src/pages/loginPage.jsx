@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useLogin } from '../hooks/useLogin';
 import './login.css'
 
-// import { checkPassword, validateEmail } from '../../utils/helpers';
 
 function loginForm() {
 

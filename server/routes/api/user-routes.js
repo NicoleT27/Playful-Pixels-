@@ -4,9 +4,6 @@ const User = require ('../../models/User');
 const jwt = require('jsonwebtoken');
 const requireAuth = require('../../middleware/requireAuth');
 
-
-// const require('dotenv').config();
-
 const createToken = (userId) => {
     return jwt.sign({_id: userId}, process.env.SESSIONSECRET, { expiresIn: '60m'});
 }
@@ -84,10 +81,6 @@ router.post('/signup', async (req, res) => {
         const userData = await User.create(req.body);
 
         const token = createToken(userData._id);
-
-        // const email = req.body.email;
-
-        // const username = userData.username;
 
         res.status(200).json({email, username, token});
     } catch (err) {

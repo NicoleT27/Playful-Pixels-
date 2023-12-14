@@ -43,7 +43,7 @@ const Navigation = () => {
         </Navbar>
         {/* if user is logged out... */}
         {!user && (
-          <div className="links">
+          <div className="links d-flex justify-content-center">
             <Link to="/login">🕹️Login</Link>
             <Link to="/signup">🎮Signup</Link>
           </div>

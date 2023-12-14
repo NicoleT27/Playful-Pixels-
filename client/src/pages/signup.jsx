@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useSignup } from "../hooks/useSignup"
 
-// import { checkPassword, validateEmail } from '../../utils/helpers';
 
 function signupForm() {
 

@@ -9,7 +9,6 @@
 }
 
 .gameTitle {
-    /* margin-left: 3em; */
     text-align: center;
     padding: 10px;
     color: #7FA7FE !important;
@@ -29,7 +28,6 @@
     cursor: pointer !important;
     transition: border-color 0.25s !important;
     background-color: white !important; 
-    /* color: black !important; */
     border-color: black !important;
     margin: 10px auto 80px !important;
     align-items: center !important;
@@ -46,7 +44,6 @@
 }
 
 .gameBtn:hover {
-    /* background-color: #7FA7FE !important; */
     transition: background-color 0.5s ease !important;
     color: #fff;
     background-color: #7FA7FE;
@@ -56,6 +53,7 @@
 .card1,
 .card2,
 .card3 {
+    background-color: rgba(255, 255, 255, 0);
     width: 18rem;
     display: flex;
     flex-direction: column;

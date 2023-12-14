@@ -62,7 +62,6 @@ const memory = () => {
         }
     }, [choiceOne, choiceTwo])
 
-    // console.log(cards);
 
     //reset choices and increase turn
     const resetTurn = () => {

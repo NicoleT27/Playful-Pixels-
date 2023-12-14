@@ -162,6 +162,11 @@ responsive behavior for small screens
     0 0 151px #FE7AB8;
 }
 
+.navLink:hover,
+.currentUser:hover {
+  color: #55509A !important;
+}
+
 .log-out {
   gap: 30px !important;
 }
@@ -200,9 +205,25 @@ responsive behavior for small screens
   color: #7FA7FE;
 }
 
+.links {
+  gap: 20px !important;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  transition: color 0.3s ease;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
 @media (max-width: 576px) {
   .logOutBtn {
-    font-size: 0.8em; /* Adjust the font size for smaller screens */
-    padding: 0.5em 1em; /* Adjust padding for smaller screens */
+    font-size: 0.8em;
+    /* Adjust the font size for smaller screens */
+    padding: 0.5em 1em;
+    /* Adjust padding for smaller screens */
   }
 }

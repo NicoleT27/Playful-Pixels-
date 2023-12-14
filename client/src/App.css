@@ -2,9 +2,6 @@
 
 
 body {
-  /* background-image: url('../src/assets/images/arcade2.png');
-  background-repeat: no-repeat;
-  justify-content: center; */
   color: white;
   font-family: "Press Start 2P";
   margin: 0;
@@ -18,7 +15,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-/* These styles will be applied to ALL buttons in the app  UNLESS bootstrap overrode it  */
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -42,19 +39,6 @@ a:hover{
   color: #7FA7FE;
   transition: color 0.5s ease;
 }
-/* Mads: moved these styles to home.css */
-/* .gameBtn {
-  background-color: white;
-  color: black;
-  border-color: black;
-  margin-left: 2em;
-  margin-bottom: 80px;
-}
-
-.gameBtn:hover {
-  background-color: #7FA7FE;
-  transition: background-color 0.5s ease;
-} */
 
 /* responsive behavior for very small screens  */
 @media (max-width: 375px) {

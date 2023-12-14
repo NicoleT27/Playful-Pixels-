@@ -63,15 +63,9 @@ body::-webkit-scrollbar-track {
   color: black;
   border-radius: 8px;
   font-family: "Press Start 2P";
-  /* width: 150px; */
   height: 50px;
   margin: 30px auto 130px;
-  /*I combined the 3 separate margins you already had */
   display: block;
-  /*this centered the btn to the page*/
-  /* margin-left: 35em; */
-  /* margin-top: 30px; */
-  /* margin-bottom: 130px; */
 }
 
 .candy-button:hover {
