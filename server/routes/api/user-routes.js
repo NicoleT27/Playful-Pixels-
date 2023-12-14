@@ -45,7 +45,7 @@ router.post('/login', async (req, res) => {
         res.status(200).json({email, username, token});
     } catch (err) {
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).json({ error: err.message });
     }
 });
 
@@ -58,18 +58,41 @@ router.post('/signup', async (req, res) => {
             throw Error('All fields must be entered');
         }
 
+        if (req.body.password.length < 8) {
+            throw Error('Password must be at least 8 characters long');
+        };
+
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (!emailRegex.test(req.body.email)) {
+            throw Error('Email is not valid');
+        }
+
+        const username = req.body.username;
+        const checkExistingUsername = await User.findOne ({ username });
+
+        if (checkExistingUsername) {
+            throw Error ('Selected username is not available.');
+        }
+        
+        const email = req.body.email;
+        const checkExistingEmail = await User.findOne ({email});
+
+        if (checkExistingEmail) {
+            throw Error ('Email already exists in database. Select a new email or log in instead.');
+        }
+
         const userData = await User.create(req.body);
 
         const token = createToken(userData._id);
 
-        const email = req.body.email;
+        // const email = req.body.email;
 
-        const username = userData.username;
+        // const username = userData.username;
 
         res.status(200).json({email, username, token});
     } catch (err) {
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).json({ error: err.message });
     }
 });
 

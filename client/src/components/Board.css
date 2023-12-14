@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 .square {
     background-color: inherit;
@@ -73,4 +74,19 @@
     background-color: #7FA7FE;
     color: #fff;
     transition: background-color 0.5s ease;
+}
+.instructions {
+  color: white;
+  font-size: 20px;
+  font-family: 'Electrolize', sans-serif;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+.O{
+  color:#FF7AB9
+}
+.x{
+    color: #80E4FC
 }

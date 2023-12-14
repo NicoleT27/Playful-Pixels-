@@ -76,6 +76,9 @@ const memory = () => {
     return (
         <div className='game'>
             <h1 className='memory' >Memory</h1>
+            <div className="instructions">
+            In this card-matching game, players flip over cards one at a time to find matching pairs. Winning pairs stay revealed as players strive to uncover more matches. Non-matching cards flip back, challenging players to remember their positions. The game concludes once all pairs are successfully matched. Dive into the memory match! Can you handle the flip?
+            </div>
             <button className='mem-button' onClick={cardShuffle}>New Game</button>
 
             <div className='grid'>
