@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .form {
+  font-family: "Press Start 2P";
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;

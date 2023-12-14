@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 // import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import arcadeMachine from "../../assets/images/machine.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; /* this was the missing import we needed to get the navbar inline styling to work*/
 
 
 
