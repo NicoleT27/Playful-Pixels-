@@ -75,7 +75,7 @@ const memory = () => {
 
     return (
         <div className='game'>
-            <h1 className='memory' >Memory Game</h1>
+            <h1 className='memory' >Memory</h1>
             <button className='mem-button' onClick={cardShuffle}>New Game</button>
 
             <div className='grid'>

@@ -2,22 +2,25 @@
 
 
 .game {
-  font-family:"Press Start 2P";
+  font-family: "Press Start 2P";
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   margin-bottom: 40px;
   padding: 70px;
 }
 
-.memory{
+.memory {
   font-size: 70px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  color:#80E4FF;
+  align-items: center;
+  color: #80E4FF;
 }
+
 .mem-button {
   background-color: aliceblue;
   color: black;
@@ -25,10 +28,12 @@
   width: 150px;
   height: 50px;
 }
-.mem-button:hover{
+
+.mem-button:hover {
   background-color: #7FA7FE;
   color: aliceblue;
 }
+
 .grid {
   margin-top: 40px;
   display: grid;
@@ -58,3 +63,44 @@
   transform: rotateY(90deg);
   transition-delay: 0s;
 }
+
+@media (min-width: 360px) and (max-width: 700px) {
+  .memory {
+    font-size: 50px;
+
+  }
+
+ 
+
+  .game {
+    margin-top: 100px;
+    padding: 50px;
+
+  }
+
+ 
+
+  .grid {
+    grid-template-columns: repeat(1, minmax(40px, 1fr));
+    margin-top: 30px;
+    margin-bottom: 30px;
+    grid-gap: 15px;
+
+  }
+}
+
+/* @media (max-width: 1200px) {
+  .memory {
+    font-size: 50px;
+  }
+
+  .game {
+    padding: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    margin-top: 20px;
+    grid-gap: 10px;
+  }
+} */
