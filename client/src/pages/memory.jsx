@@ -67,7 +67,7 @@ const memory = () => {
     const resetTurn = () => {
         setChoiceOne(null);
         setChoiceTwo(null);
-        setTurns(prevTurns => prevTurns = 1);
+        setTurns(prevTurns => prevTurns + 1);
         setDisabled(false);
     }
 
@@ -91,6 +91,7 @@ const memory = () => {
                     />
                 ))}
             </div>
+            <p className='turns'>Turns: {turns}</p>
         </div>
     )
 }

@@ -68,7 +68,10 @@
   transform: rotateY(90deg);
   transition-delay: 0s;
 }
-
+.turns  {
+  color: #fff;
+  margin-top: 20px;
+}
 .instructions{
    color: white;
   font-size: 20px;
