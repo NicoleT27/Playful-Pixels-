@@ -23,7 +23,7 @@ const Navigation = () => {
 
   return (
     <div className="navBar justify-content-center">
-        <Navbar expand="lg" fixed="bottom">
+        <Navbar expand="lg">
           {/* if user is logged in... */}
           {user && (
             <div className="log-out">

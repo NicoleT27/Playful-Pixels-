@@ -19,7 +19,7 @@
   height: 560px;
   display: flex;
   flex-wrap: wrap;
-  border: 10px solid #7FA7FE;
+  /* border: 5px solid #7FA7FE; */
   border-radius: 2%;
 }
 
