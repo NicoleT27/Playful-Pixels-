@@ -207,7 +207,7 @@ const checkForRowOfFour = () => {
           </div>
         ) : (
           <div>
-            <div>🍬Candy Crush🍬</div>
+            <div>🍬Candy Crush</div>
             {showScore && <div className="score-display">Score: {scoreDisplay}</div>}
               {gameStarted && <div className="timer-display">Time Left: {currentTime}s</div>}
              {showButton && <div className="instructions">Click 'Start Game' to begin a 30-second challenge. Match three candies in a row or column for 3 points. Match four for 4 points. The game is over when the timer ends. Sweet victory awaits! </div>}

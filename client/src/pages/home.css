@@ -53,7 +53,7 @@
 .gameBtn:hover {
     transition: background-color 0.5s ease !important;
     color: #fff;
-    background-color: #7FA7FE;
+    background-color: #7FA7FE !important;
 }
 
 

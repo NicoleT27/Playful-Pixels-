@@ -95,11 +95,24 @@ background-color: #7FA7FE;
 }
   @media (min-width: 360px) and (max-width: 700px) {
 .candyGame {
-    width: 90%; 
-    height: 90vw; 
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 2%;
-    margin: auto; 
+    width: 100%; 
+    margin:auto;
   }
+  .candyGame img {
+  width: 70px;
+  height: 40px;
+}
+.welcome {
+font-size: 60px;
+}
+.app {
+  margin-top: -20px;
+
+}
+.score-display,
+.timer-display {
+  font-size: 20px;
+}
+
+
 }
