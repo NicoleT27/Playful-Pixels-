@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import { useLogout } from "../../hooks/useLogout";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import Container from "react-bootstrap/Container";
-// import Navbar from "react-bootstrap/Navbar";
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import arcadeMachine from "../../assets/images/machine.png"
+import Navbar from "react-bootstrap/Navbar";
+// import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import arcadeMachine from "../../assets/images/machine.png";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -21,12 +22,12 @@ const Navigation = () => {
   };
 
   return (
-    <div className="navBar">
-        <Navbar className="bg-body-tertiary">
+    <div className="navBar justify-content-center">
+        <Navbar expand="lg" fixed="bottom">
           {/* if user is logged in... */}
           {user && (
             <div className="log-out">
-                <Navbar.Text className="navLink">
+                <Navbar.Text className="navLink me-auto">
                   Signed in as:{" "}
                   <Link to="#login" >
                     <div className='currentUser'>{user.username}</div>
@@ -48,20 +49,25 @@ const Navigation = () => {
           </div>
         )}
     </div>
-    
+
   );
 };
 
 export default Navigation;
 
-// import React from 'react';
+// import { Link } from "react-router-dom";
+// import { useLogout } from "../../hooks/useLogout";
+// import { useAuthContext } from "../../hooks/useAuthContext";
 // import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-// import { useLogout } from '../../hooks/useLogout';
-// import { useAuthContext } from '../../hooks/useAuthContext';
-// import arcadeMachine from '../../assets/images/machine.png';
+// import arcadeMachine from "../../assets/images/machine.png"
+// import Container from 'react-bootstrap/Container';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import "./Navbar.css";
 
-// const Navigation = () => {
+
+
+
+// function Navigation() {
 //   const { logout } = useLogout();
 //   const { user } = useAuthContext();
 
@@ -70,37 +76,21 @@ export default Navigation;
 //   };
 
 //   return (
-//     <Navbar bg="body-tertiary" expand="sm">
-//       <Navbar.Brand>
-//         <Link to="/" className="navLink">
-//           <img src={arcadeMachine} alt="Home" className="arcadeMachine" />
-//         </Link>
-//       </Navbar.Brand>
-//       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//       <Navbar.Collapse id="basic-navbar-nav">
-//         {user ? (
-//           <Nav className="ml-auto">
-//             <NavDropdown title={`Signed in as: ${user.email}`} id="basic-nav-dropdown">
-//               <NavDropdown.Item as={Link} to="#login">
-//                 Profile
-//               </NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item onClick={handleClick}>Log out</NavDropdown.Item>
-//             </NavDropdown>
+//     <Navbar expand="lg" className="bg-body-tertiary">
+//       <Container>
+//         <Navbar.Brand><Link to="#login" >
+//           <div className='currentUser'>{user.username}</div>
+//         </Link></Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse id="basic-navbar-nav">
+//           <Nav className="ms-auto">
+//             <Nav.Link href="#home">Home</Nav.Link>
+//             <Nav.Link href="#link">Logout</Nav.Link>
 //           </Nav>
-//         ) : (
-//           <Nav className="ml-auto">
-//             <Link to="/login" className="navLink">
-//               🕹️Login
-//             </Link>
-//             <Link to="/signup" className="navLink">
-//               🎮Signup
-//             </Link>
-//           </Nav>
-//         )}
-//       </Navbar.Collapse>
+//         </Navbar.Collapse>
+//       </Container>
 //     </Navbar>
 //   );
-// };
+// }
 
 // export default Navigation;
