@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Description
-This application is an online gameroom with multiple games to choose from.
+This application is an online game room with multiple games to choose from.
 
 ## Table of Contents
 - [Description](#description)
@@ -41,11 +41,11 @@ This application is an online gameroom with multiple games to choose from.
 
 
 ## Install
-1. Clone the repository from Github
+1. Clone the repository from GitHub
 ```
 git clone git@github.com:NicoleT27/Playful-Pixels-.git
 ```
-2. Open the cloned respository in any source code editor
+2. Open the cloned repository in any source code editor
 3. Open the integrated terminal for the document and enter this code to install the dependencies
 ```
 npm install 
@@ -64,11 +64,11 @@ npm install
 ## Contributing
 This Application was Made with the contributions of:
 - Madeleine Abraham
-  -  Github : https://github.com/MadeleineA42
+  -  Github: https://github.com/MadeleineA42
 - Nicole Torres 
-    -  Github : https://github.com/NicoleT27
+    -  Github: https://github.com/NicoleT27
 - Alejandra Bernabel 
-    - Github : https://github.com/alejandra-e-bernabel
+    - Github: https://github.com/alejandra-e-bernabel
 
 ## References
 - Password hashing using Mongoose:
